@@ -16,11 +16,11 @@ Which opens to the enrichment services screen:
 
 This example will show you how to initiate a machine based caption request:
 
-The main API call will be [entryVendorTask.add](https://developer.kaltura.com/console/service/entryVendorTask/action/add) 
+The main API call will be [entryVendorTask.add](/console/service/entryVendorTask/action/add) 
 
 You will need to collect some necessary information to submit to the above call. 
 
-First, you will need to get a reachProfileId from [reachProfile.list](https://developer.kaltura.com/api-docs/service/reachProfile/action/list) it will be the `id` field:
+First, you will need to get a reachProfileId from [reachProfile.list](/api-docs/service/reachProfile/action/list) it will be the `id` field:
 
 ```json
 {
@@ -35,7 +35,7 @@ First, you will need to get a reachProfileId from [reachProfile.list](https://de
 ```
 
 
-Next you will need a `catalogItemId` this is supplied from [vendorCatalogItem.list](https://developer.kaltura.com/console/service/vendorCatalogItem/action/list) this will be the `id` field from a request:
+Next you will need a `catalogItemId` this is supplied from [vendorCatalogItem.list](/console/service/vendorCatalogItem/action/list) this will be the `id` field from a request:
 
 ```json
   "objects": [
@@ -50,7 +50,7 @@ Next you will need a `catalogItemId` this is supplied from [vendorCatalogItem.li
       "updatedAt": 1624879011,
 ```
 
-Using the `KalturaCatalogItemAdvancedFilter` in a [vendorCatalogItem.list](https://developer.kaltura.com/console/service/vendorCatalogItem/action/list) query will allow you to programmatically refine the `vendorCatalogItem` by such services as MACHINE vs. HUMAN, `sourceLanguage` `sourceFeature` `turnAroundTime` and more:
+Using the `KalturaCatalogItemAdvancedFilter` in a [vendorCatalogItem.list](/console/service/vendorCatalogItem/action/list) query will allow you to programmatically refine the `vendorCatalogItem` by such services as MACHINE vs. HUMAN, `sourceLanguage` `sourceFeature` `turnAroundTime` and more:
 
 ```bash
 curl -X POST https://www.kaltura.com/api_v3/service/reach_vendorcatalogitem/action/list \
@@ -67,7 +67,7 @@ curl -X POST https://www.kaltura.com/api_v3/service/reach_vendorcatalogitem/acti
 
 ## Building a query:
 
-Now you have all the requirements to build an enrichment query using [entryVendorTask.add](https://developer.kaltura.com/console/service/entryVendorTask/action/add) the final necessary parameter will be an `entryId` for the piece of content that you want to perform enrichment services on:
+Now you have all the requirements to build an enrichment query using [entryVendorTask.add](/console/service/entryVendorTask/action/add) the final necessary parameter will be an `entryId` for the piece of content that you want to perform enrichment services on:
 
 ```bash
 curl -X POST https://www.kaltura.com/api_v3/service/reach_entryvendortask/action/add \
@@ -78,15 +78,15 @@ curl -X POST https://www.kaltura.com/api_v3/service/reach_entryvendortask/action
     -d "entryVendorTask[objectType]=KalturaEntryVendorTask"
 ```
 
-While the task is being completed, you may want to see a list of all of your tasks via: [entryVendorTask.list](https://developer.kaltura.com/console/service/entryVendorTask/action/list)
+While the task is being completed, you may want to see a list of all of your tasks via: [entryVendorTask.list](/console/service/entryVendorTask/action/list)
 
 For a full list of API calls related to the creation/modification and user experience flow for entryVendorTask refer to 
-https://developer.kaltura.com/console/service/entryVendorTask
+/console/service/entryVendorTask
 
 ## See Also:
 
-https://developer.kaltura.com/console/service/entryVendorTask
+/console/service/entryVendorTask
 
-https://developer.kaltura.com/api-docs/service/vendorCatalogItem
+/api-docs/service/vendorCatalogItem
 
-https://developer.kaltura.com/api-docs/service/reachProfile
+/api-docs/service/reachProfile

@@ -24,28 +24,28 @@ You can read more about the user experience to create and manage sub accounts th
 
 For an in depth example for creating, listing and updating a partner account, refer to [this code example](https://gist.github.com/zoharbabin/c843a8c86122892d78ebfd5cf3b1182e)
 
-The API endpoint group related to creating and working with sub accounts is https://developer.kaltura.com/console/service/partner
+The API endpoint group related to creating and working with sub accounts is /console/service/partner
 
-In the first example a sub account is created using https://developer.kaltura.com/console/service/partner/action/register
+In the first example a sub account is created using /console/service/partner/action/register
 
-Next, all the sub-accounts for a given parent are listed via:https://developer.kaltura.com/console/service/partner/action/list
+Next, all the sub-accounts for a given parent are listed via:/console/service/partner/action/list
 
-Finally, the https://developer.kaltura.com/console/service/varConsole/action/updateStatus is used to update the status of the partner. 
+Finally, the /console/service/varConsole/action/updateStatus is used to update the status of the partner. 
 
 Here is a fully working web-app that queries a collection of sub-accounts: https://github.com/kaltura-vpaas/kaltura-accounts-entries-export/blob/main/kaltura-entries-export-excel.php#L136
 
 ## See Also:
 
-- [partner.count](https://developer.kaltura.com/console/service/partner/action/count)
-- [partner.get](https://developer.kaltura.com/console/service/partner/action/get)
-- [partner.getInfo](https://developer.kaltura.com/console/service/partner/action/getInfo)
-- [partner.getPublicInfo](https://developer.kaltura.com/console/service/partner/action/getPublicInfo)
-- [partner.getSecrets](https://developer.kaltura.com/console/service/partner/action/getSecrets)
-- [partner.getStatistics](https://developer.kaltura.com/console/service/partner/action/getStatistics)
-- [partner.getUsage](https://developer.kaltura.com/console/service/partner/action/getUsage)
-- [partner.list](https://developer.kaltura.com/console/service/partner/action/list)
-- [partner.listFeatureStatus](https://developer.kaltura.com/console/service/partner/action/listFeatureStatus)
-- [partner.listPartnersForUser](https://developer.kaltura.com/console/service/partner/action/listPartnersForUser)
-- [partner.register](https://developer.kaltura.com/console/service/partner/action/register)
-- [partner.registrationValidation](https://developer.kaltura.com/console/service/partner/action/registrationValidation)
-- [partner.update](https://developer.kaltura.com/console/service/partner/action/update)
+- [partner.count](/console/service/partner/action/count)
+- [partner.get](/console/service/partner/action/get)
+- [partner.getInfo](/console/service/partner/action/getInfo)
+- [partner.getPublicInfo](/console/service/partner/action/getPublicInfo)
+- [partner.getSecrets](/console/service/partner/action/getSecrets)
+- [partner.getStatistics](/console/service/partner/action/getStatistics)
+- [partner.getUsage](/console/service/partner/action/getUsage)
+- [partner.list](/console/service/partner/action/list)
+- [partner.listFeatureStatus](/console/service/partner/action/listFeatureStatus)
+- [partner.listPartnersForUser](/console/service/partner/action/listPartnersForUser)
+- [partner.register](/console/service/partner/action/register)
+- [partner.registrationValidation](/console/service/partner/action/registrationValidation)
+- [partner.update](/console/service/partner/action/update)

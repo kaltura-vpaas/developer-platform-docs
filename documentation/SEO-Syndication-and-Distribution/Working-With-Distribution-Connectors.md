@@ -8,7 +8,7 @@ Kaltura has a [rich system](https://knowledge.kaltura.com/help/content-distribut
 
 As an example, if one of your entries `entryId` is already distributed to Youtube and you want to retrieve the id of the content on the Youtube, the following example illustrates how:
 
-First query [distributionProfile.list](https://developer.kaltura.com/console/service/distributionProfile/action/list) to find the `id` of the Youtube distribution profile. Provide this `id` to the `distributionProfileIdEqual` and filter as well by `entryIdEqual`. The result will look like this:
+First query [distributionProfile.list](/console/service/distributionProfile/action/list) to find the `id` of the Youtube distribution profile. Provide this `id` to the `distributionProfileIdEqual` and filter as well by `entryIdEqual`. The result will look like this:
 
 ```json
 "objects": [
@@ -46,35 +46,35 @@ you can subsitute the `remoteId` and the video will be playable.
 
 There are many ways to access the distribution api. Refer to these resources for a complete list:
 
-https://developer.kaltura.com/console/service/entryDistribution
+/console/service/entryDistribution
 
-- [entryDistribution.add](https://developer.kaltura.com/console/service/entryDistribution/action/add)
-- [entryDistribution.delete](https://developer.kaltura.com/console/service/entryDistribution/action/delete)
-- [entryDistribution.get](https://developer.kaltura.com/console/service/entryDistribution/action/get)
-- [entryDistribution.list](https://developer.kaltura.com/console/service/entryDistribution/action/list)
-- [entryDistribution.retrySubmit](https://developer.kaltura.com/console/service/entryDistribution/action/retrySubmit)
-- [entryDistribution.serveReturnedData](https://developer.kaltura.com/console/service/entryDistribution/action/serveReturnedData)
-- [entryDistribution.serveSentData](https://developer.kaltura.com/console/service/entryDistribution/action/serveSentData)
-- [entryDistribution.submitAdd](https://developer.kaltura.com/console/service/entryDistribution/action/submitAdd)
-- [entryDistribution.submitDelete](https://developer.kaltura.com/console/service/entryDistribution/action/submitDelete)
-- [entryDistribution.submitFetchReport](https://developer.kaltura.com/console/service/entryDistribution/action/submitFetchReport)
-- [entryDistribution.submitUpdate](https://developer.kaltura.com/console/service/entryDistribution/action/submitUpdate)
-- [entryDistribution.update](https://developer.kaltura.com/console/service/entryDistribution/action/update)
-- [entryDistribution.validate](https://developer.kaltura.com/console/service/entryDistribution/action/validate)
-
-
-
-https://developer.kaltura.com/console/service/distributionProfile
-
-- [distributionProfile.add](https://developer.kaltura.com/console/service/distributionProfile/action/add)
-- [distributionProfile.delete](https://developer.kaltura.com/console/service/distributionProfile/action/delete)
-- [distributionProfile.get](https://developer.kaltura.com/console/service/distributionProfile/action/get)
-- [distributionProfile.list](https://developer.kaltura.com/console/service/distributionProfile/action/list)
-- [distributionProfile.listByPartner](https://developer.kaltura.com/console/service/distributionProfile/action/listByPartner)
-- [distributionProfile.update](https://developer.kaltura.com/console/service/distributionProfile/action/update)
-- [distributionProfile.updateStatus](https://developer.kaltura.com/console/service/distributionProfile/action/updateStatus)
+- [entryDistribution.add](/console/service/entryDistribution/action/add)
+- [entryDistribution.delete](/console/service/entryDistribution/action/delete)
+- [entryDistribution.get](/console/service/entryDistribution/action/get)
+- [entryDistribution.list](/console/service/entryDistribution/action/list)
+- [entryDistribution.retrySubmit](/console/service/entryDistribution/action/retrySubmit)
+- [entryDistribution.serveReturnedData](/console/service/entryDistribution/action/serveReturnedData)
+- [entryDistribution.serveSentData](/console/service/entryDistribution/action/serveSentData)
+- [entryDistribution.submitAdd](/console/service/entryDistribution/action/submitAdd)
+- [entryDistribution.submitDelete](/console/service/entryDistribution/action/submitDelete)
+- [entryDistribution.submitFetchReport](/console/service/entryDistribution/action/submitFetchReport)
+- [entryDistribution.submitUpdate](/console/service/entryDistribution/action/submitUpdate)
+- [entryDistribution.update](/console/service/entryDistribution/action/update)
+- [entryDistribution.validate](/console/service/entryDistribution/action/validate)
 
 
 
-https://developer.kaltura.com/console/service/distributionProvider
+/console/service/distributionProfile
+
+- [distributionProfile.add](/console/service/distributionProfile/action/add)
+- [distributionProfile.delete](/console/service/distributionProfile/action/delete)
+- [distributionProfile.get](/console/service/distributionProfile/action/get)
+- [distributionProfile.list](/console/service/distributionProfile/action/list)
+- [distributionProfile.listByPartner](/console/service/distributionProfile/action/listByPartner)
+- [distributionProfile.update](/console/service/distributionProfile/action/update)
+- [distributionProfile.updateStatus](/console/service/distributionProfile/action/updateStatus)
+
+
+
+/console/service/distributionProvider
 

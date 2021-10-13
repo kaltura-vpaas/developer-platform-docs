@@ -55,4 +55,4 @@ Result header:
 object_id,location_name,count_plays,count_plays_25,count_plays_50,count_plays_75,count_plays_100,play_through_ratio
 {% endhighlight %}
 
-As you can see, there are many ways to customize your report based on your business use cases. You can easily try them out using our [Interactive Console](https://developer.kaltura.com/console/service/report/action/getTable) or see what they look like in the [KMC](https://kmc.kaltura.com/index.php/kmc/kmc4#analytics\|contentDashboard). 
+As you can see, there are many ways to customize your report based on your business use cases. You can easily try them out using our [Interactive Console](/console/service/report/action/getTable) or see what they look like in the [KMC](https://kmc.kaltura.com/index.php/kmc/kmc4#analytics\|contentDashboard). 

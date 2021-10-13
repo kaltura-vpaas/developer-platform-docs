@@ -11,18 +11,18 @@ The Kaltura Session is an authorization string that identifies the user watching
 
 ### Create the Application Token 
 
-You can create an appToken with the [appToken.add](https://developer.kaltura.com/console/service/appToken/action/add) action. Once you've created it, hold on to its token and ID as you'll need those to create the session. You can also see a list of all available appTokens by using [appToken.list](https://developer.kaltura.com/console/service/appToken/action/list). 
+You can create an appToken with the [appToken.add](/console/service/appToken/action/add) action. Once you've created it, hold on to its token and ID as you'll need those to create the session. You can also see a list of all available appTokens by using [appToken.list](/console/service/appToken/action/list). 
 
 There are a few steps to creating a KS with an appToken.
 1. **Generate a basic kaltura session:** because all calls to the API *must* include a Kaltura Session, we first use the session API to create what is called a **widget session**, which has limited functionality and is used in the following steps 
 2. **Create a Token Hash** of the appToken token and the widget session, combined. 
 3. **Call the appToken.startSession API** with the widget session, the appToken ID, and the hash string. 
-You can see all these steps interactively with [this workflow](https://developer.kaltura.com/workflows/Generate_API_Sessions/App_Token_Authentication), or read the guide [here](../../Getting-Started-Building-Video-Applications /Application-Tokens.html) but examples below are written for client-side swift code. 
+You can see all these steps interactively with [this workflow](/workflows/Generate_API_Sessions/App_Token_Authentication), or read the guide [here](../../Getting-Started-Building-Video-Applications /Application-Tokens.html) but examples below are written for client-side swift code. 
 
 Let's get started. If you're already creating a Kaltura Session on the server side, you can skip these steps. 
 
 **Step 1: Generate a widget session** 
-To get a basic KS, we need to construct a URL request to the [session.startWidgetSession](https://developer.kaltura.com/api-docs/service/session/action/startWidgetSession) service. It needs your widget ID, which is basically just your partnerID with an underscore prefix. 
+To get a basic KS, we need to construct a URL request to the [session.startWidgetSession](/api-docs/service/session/action/startWidgetSession) service. It needs your widget ID, which is basically just your partnerID with an underscore prefix. 
 So let's create a function called `generateWidgetSession()` and form that URL. 
 
 {% highlight swift %}
@@ -67,7 +67,7 @@ let tokenHash: String = Hash.SHA256("\(widgetKs)\(appToken)")!
 
 **Step 3: Get the Kaltura Session** 
 
-Once you have that hash string, you can now form the URL, make the call to [appToken.startSession](https://developer.kaltura.com/console/service/appToken/action/startSession), and extract the KS from the response. Again, a proper application should include error handling when making calls to the API. 
+Once you have that hash string, you can now form the URL, make the call to [appToken.startSession](/console/service/appToken/action/startSession), and extract the KS from the response. Again, a proper application should include error handling when making calls to the API. 
 
 {% highlight swift %}
 let URLString = NSString(format:"https://www.kaltura.com/api_v3/service/apptoken/action/startsession?ks=%@&userId=%@&id=%@&tokenHash=%@&format=1",widgetKs,userId,appTokenId,tokenHash)

@@ -10,9 +10,9 @@ The appToken is **created and customized by the account administrator**, and the
 
 ## Before You Start
 
-Before you create an appToken, you need to decide whether to create a "blank" appToken, or one preconfigured with permissions. If your only concern is giving access without sharing your Admin secret, a basic appToken is sufficient. But if you want to always limit the permissions of a specific application, you'll need to create the appToken with pre-configured [privileges](https://developer.kaltura.com/api-docs/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html). Similarly, it is also possible to limit the appToken to a particular user ID should your implementation call for it. 
+Before you create an appToken, you need to decide whether to create a "blank" appToken, or one preconfigured with permissions. If your only concern is giving access without sharing your Admin secret, a basic appToken is sufficient. But if you want to always limit the permissions of a specific application, you'll need to create the appToken with pre-configured [privileges](/api-docs/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html). Similarly, it is also possible to limit the appToken to a particular user ID should your implementation call for it. 
 
-> Note: Any configurations (privileges or user ID) included in the creation of the appToken ([`appToken.add`](https://developer.kaltura.com/console/service/appToken/action/add)) *cannot* be overridden when the session is created with that appToken ([`appToken.startSession`](https://developer.kaltura.com/console/service/appToken/action/startSession)). 
+> Note: Any configurations (privileges or user ID) included in the creation of the appToken ([`appToken.add`](/console/service/appToken/action/add)) *cannot* be overridden when the session is created with that appToken ([`appToken.startSession`](/console/service/appToken/action/startSession)). 
 
 The **privileges string** that could be included in the appToken is made up of `key:value` pairs that determine the actions available to this Kaltura Session. The following are common privileges for limiting your appTokens access: 
 
@@ -24,7 +24,7 @@ The **privileges string** that could be included in the appToken is made up of `
 
 ## Creating the App Token 
 
-We'll create an AppToken using the [`appToken.add`](https://developer.kaltura.com/console/service/appToken/action/add) API. Possible parameters include: 
+We'll create an AppToken using the [`appToken.add`](/console/service/appToken/action/add) API. Possible parameters include: 
 
 | Name        | Type | Writable | Description|
 |:------------ |:------------------|:------------------|:------------------|
@@ -57,13 +57,13 @@ The sessionPrivilege parameter is a string containing two pieces of information:
 
 ## Basic App Token 
 
-We'll start with an App Token without privileges, without a user, and without an expiry date, using [`appToken.add`](https://developer.kaltura.com/console/service/appToken/action/add):
+We'll start with an App Token without privileges, without a user, and without an expiry date, using [`appToken.add`](/console/service/appToken/action/add):
 
 {% code_example apptoken1 %}
 &nbsp;
 
 
-In the result you'll see an `id` as well as a `token`. Hold on to those as you'll need them for session creation. You can also view all your App Tokens with the [`appToken.list`](https://developer.kaltura.com/console/service/appToken/action/list) action. 
+In the result you'll see an `id` as well as a `token`. Hold on to those as you'll need them for session creation. You can also view all your App Tokens with the [`appToken.list`](/console/service/appToken/action/list) action. 
 
 ### Set a User Role
 
@@ -75,11 +75,11 @@ The easy way to create a **User Role** is [in the KMC](https://kmc.kaltura.com/i
 
 For example, under Content Moderation, you may allow this **User Role** to perform all actions except for deleting. You can also switch off a specific category altogether. Hit save and you should now see your new **User Role** in the list. 
 
-Alternatively, if you know exactly which actions you'd like to include in your **User Role**, you can use the [`userRole.add`](https://developer.kaltura.com/console/service/userRole/action/add) API action to create a new role. You can see all of the available permission names and descriptions by listing them with [`permission.list`](https://developer.kaltura.com/console/service/permission/action/list). Be sure to set the status of your role to Active (1).
+Alternatively, if you know exactly which actions you'd like to include in your **User Role**, you can use the [`userRole.add`](/console/service/userRole/action/add) API action to create a new role. You can see all of the available permission names and descriptions by listing them with [`permission.list`](/console/service/permission/action/list). Be sure to set the status of your role to Active (1).
 
 > Note: You will not be able to see in the KMC any roles that are created outside the KMC (for example via the API).
 
-You can get a list of all your existing roles, with the [`userRole.list`](https://developer.kaltura.com/console/service/userRole/action/list) action. Make note of the `id` of your new **User Role** as you'll be needing it for your App Token, where you can set the role like this: 
+You can get a list of all your existing roles, with the [`userRole.list`](/console/service/userRole/action/list) action. Make note of the `id` of your new **User Role** as you'll be needing it for your App Token, where you can set the role like this: 
 
 {% code_example apptoken2 %}
 &nbsp;
@@ -93,12 +93,12 @@ To enable entitlements on the category, select Add Entitlements in the Integrati
 {% code_example apptoken3 %}
 &nbsp;
 
-To learn more about KS privileges, see the [Kaltura API Authentication and Security](https://developer.kaltura.com/api-docs/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html) guide.
+To learn more about KS privileges, see the [Kaltura API Authentication and Security](/api-docs/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html) guide.
 
 
 ### Add a User to the Category
 
-If you set the Content Privacy setting of that category to Private, for users to access this category, they will also need to be members of the category, which can be done in the Entitlements tab in the Category Settings. You can also use the [`categoryUser.add`](https://developer.kaltura.com/console/service/categoryUser/action/add) action, where you'll need the category ID and the user ID, which can be any string identifying that user. 
+If you set the Content Privacy setting of that category to Private, for users to access this category, they will also need to be members of the category, which can be done in the Entitlements tab in the Category Settings. You can also use the [`categoryUser.add`](/console/service/categoryUser/action/add) action, where you'll need the category ID and the user ID, which can be any string identifying that user. 
 
 {% code_example apptoken4 %}
 &nbsp;
@@ -113,7 +113,7 @@ Let's bring it all together. We have a user. We have a User Role, and its ID. We
 {% code_example apptoken5 %}
 &nbsp;
 
-> Reminder: You can get a list of all your App Tokens with the [`appToken.list`](https://developer.kaltura.com/console/service/appToken/action/list) action. 
+> Reminder: You can get a list of all your App Tokens with the [`appToken.list`](/console/service/appToken/action/list) action. 
 
 ## Generate Kaltura Sessions with the App Token 
 
@@ -121,7 +121,7 @@ The Kaltura Session generated with the App Token will have the content and actio
 
 ### Step 1: Create a Kaltura Session 
 
-Because a Kaltura Session is required for every call to the API, we'll need to create an unprivileged session before being able to create the App Token session. We use the [`session.startWidgetSession`](https://developer.kaltura.com/console/service/appToken/action/startSession) action with the widget ID, which is your partner ID with an underscore prefix. 
+Because a Kaltura Session is required for every call to the API, we'll need to create an unprivileged session before being able to create the App Token session. We use the [`session.startWidgetSession`](/console/service/appToken/action/startSession) action with the widget ID, which is your partner ID with an underscore prefix. 
 
 {% code_example apptoken6 %}
 &nbsp;
@@ -143,7 +143,7 @@ The resulting string is the `tokenHash` which you'll use in the next step.
 
 ### Step 3: Generate the Session 
 
-We'll use the [`App Token.startSession`](https://developer.kaltura.com/console/service/appToken/action/startSession) action with the unprivileged KS, the hashToken, and the token `ID`: 
+We'll use the [`App Token.startSession`](/console/service/appToken/action/startSession) action with the unprivileged KS, the hashToken, and the token `ID`: 
 
 > Note: If you created an App Token with a user ID, it will override any user ID value used in `appToken.startSession`. 
 

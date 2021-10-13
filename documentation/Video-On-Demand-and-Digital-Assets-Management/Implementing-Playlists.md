@@ -8,15 +8,15 @@ Kaltura supports a rich variety of playlists for your content. Read the Kaltura 
 
 Manual playlists allow you to select a static list of items, while Rule-based playlists are dynamic and automatically updated based on what's currently available in your media library and what rules define the playlist. 
 
-The [playlist API](https://developer.kaltura.com/api-docs/service/playlist) has actions to add,delete, update and retrieve playlists.
+The [playlist API](/api-docs/service/playlist) has actions to add,delete, update and retrieve playlists.
 
 ## Playing playlists
 
-For a detailed overview of how to playback playlists refer to [web player playlist guide](https://developer.kaltura.com/player/web/playlist-web) or the [android playlist guide](https://developer.kaltura.com/player/android/playlist-android)
+For a detailed overview of how to playback playlists refer to [web player playlist guide](/player/web/playlist-web) or the [android playlist guide](/player/android/playlist-android)
 
 ## Using API to create playlists
 
-Start with [playlist.add](https://developer.kaltura.com/api-docs/service/playlist/action/add)
+Start with [playlist.add](/api-docs/service/playlist/action/add)
 
 ### Creating Manual Playlists
 
@@ -44,7 +44,7 @@ For a DYNAMIC list, you will need to supply xml for your playlistContent. For ex
   
 ```
 
-This was obtained from the `playlistContent` field returned by calling [playlist.get](https://developer.kaltura.com/api-docs/service/playlist/action/get) using the playlist entryId obtained from the KMC or via [playlist.list](https://developer.kaltura.com/api-docs/service/playlist/action/list)
+This was obtained from the `playlistContent` field returned by calling [playlist.get](/api-docs/service/playlist/action/get) using the playlist entryId obtained from the KMC or via [playlist.list](/api-docs/service/playlist/action/list)
 
 ### Creating MRSS Playlists
 
@@ -60,7 +60,7 @@ Refer to [Play-Manifests,-HLS-and-DASH-Streaming](../Streaming-and-Publishing/Pl
 
 ## Playlist Analytics
 
-A playlist is child of [BaseEntry](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaPlaylist) and its `entryId` can be used to retrieve analytics, see  [Intro-to-Kaltura-Video-Analytics-and-Best-Practices](../Analytics-and-Reporting /Intro-to-Kaltura-Video-Analytics-and-Best-Practices.html) 
+A playlist is child of [BaseEntry](/api-docs/General_Objects/Objects/KalturaPlaylist) and its `entryId` can be used to retrieve analytics, see  [Intro-to-Kaltura-Video-Analytics-and-Best-Practices](../Analytics-and-Reporting /Intro-to-Kaltura-Video-Analytics-and-Best-Practices.html) 
 
 You can also refer to this [guide](https://knowledge.kaltura.com/help/playlist-analytics) for accessing playlist analytics from the KMC.
 

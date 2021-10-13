@@ -48,5 +48,5 @@ The following lists few of the conventional flavor IDs:
 The correct flavor IDs (per account and Kaltura edition) can be retrieved using one of the following ways:
 
 1. Visiting the KMC Settings > [Transcoding Profiles](http://knowledge.kaltura.com/faq/how-create-transcoding-profile).
-2. Making an API call to the [ConversionProfile.list action](https://developer.kaltura.com/api-docs/#/conversionProfile.list).
+2. Making an API call to the [ConversionProfile.list action](/api-docs/#/conversionProfile.list).
 

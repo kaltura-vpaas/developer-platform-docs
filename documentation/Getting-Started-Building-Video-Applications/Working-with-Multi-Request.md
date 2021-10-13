@@ -40,13 +40,13 @@ function multirequest_single_callback(){
 		.add(kaltura.services.media.deleteAction("{1:result:id}"))
 ```
 
-Two API calls are used. The first is [media.add](https://developer.kaltura.com/console/service/media/action/add)
+Two API calls are used. The first is [media.add](/console/service/media/action/add)
 
 ```javascript
 kaltura.services.media.add(entry)
 ```
 
-Which then immediately calls [media.delete](https://developer.kaltura.com/console/service/media/action/delete):
+Which then immediately calls [media.delete](/console/service/media/action/delete):
 
 ```javascript
 .add(kaltura.services.media.deleteAction("{1:result:id}"))
@@ -61,11 +61,11 @@ kaltura.services.media.listAction(filter, pager)
     .add(kaltura.services.media.get("{1:result:objects:0:id}", version)
 ```
 
-The [media.list](https://developer.kaltura.com/console/service/media/action/list) request returns an object of type *KalturaMediaListResponse*, which contains an object named *objects* 
+The [media.list](/console/service/media/action/list) request returns an object of type *KalturaMediaListResponse*, which contains an object named *objects* 
 
-The second request is [media.get](https://developer.kaltura.com/console/service/media/action/get), which uses `entryId` as its first argument.
+The second request is [media.get](/console/service/media/action/get), which uses `entryId` as its first argument.
 
-The `entryId` input is dynamic, and the value is obtained from the first request. Since the [media.list](https://developer.kaltura.com/console/service/media/action/list) response is constructed from array object within a response object, the first property to access is `KalturaMediaEntryArray`
+The `entryId` input is dynamic, and the value is obtained from the first request. Since the [media.list](/console/service/media/action/list) response is constructed from array object within a response object, the first property to access is `KalturaMediaEntryArray`
 
 Here is a partial json response from `media.list`:
 

@@ -4,7 +4,7 @@ title: Getting Started with the Web Player
 weight: 110
 --- 
 
-Looking for Native Mobile SDKs? Check out the docs for the [iOS Player SDK](https://developer.kaltura.com/player/ios/getting-started-ios/) or the [Android Player SDK](https://developer.kaltura.com/player/android/getting-started-android/).
+Looking for Native Mobile SDKs? Check out the docs for the [iOS Player SDK](/player/ios/getting-started-ios/) or the [Android Player SDK](/player/android/getting-started-android/).
 
 ## Before You Begin 
 
@@ -120,8 +120,8 @@ Let's walk through the steps for writing that embed code.
 
 Congrats! Running that page should show you a Kaltura Player loaded with the entry that you chose. 
 
-Notice that this method is the **Dynamic Embed**, which is different than the aforementioned **auto embed** code, and is useful for cases when you want control runtime configuration dynamically. Click [here](https://developer.kaltura.com/player/web/embed-types-web) to read more about embed types. 
+Notice that this method is the **Dynamic Embed**, which is different than the aforementioned **auto embed** code, and is useful for cases when you want control runtime configuration dynamically. Click [here](/player/web/embed-types-web) to read more about embed types. 
 
 ## Configuring the Player
 
-After creating a player and embedding it in your site, you may want to configure it using the wide range of configuration options. Click [here](https://developer.kaltura.com/player/web/configuration-web) to learn more about the various ways of configuring your player. 
+After creating a player and embedding it in your site, you may want to configure it using the wide range of configuration options. Click [here](/player/web/configuration-web) to learn more about the various ways of configuring your player. 

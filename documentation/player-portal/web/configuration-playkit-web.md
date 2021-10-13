@@ -705,7 +705,7 @@ Possible values:
 
 ### config.playback.autoplay/allowMutedAutoPlay
 
-for `autoplay` & `allowMutedAutoPlay` options read [here](https://developer.kaltura.com/player/web/autoplay-web).
+for `autoplay` & `allowMutedAutoPlay` options read [here](/player/web/autoplay-web).
 
 ### config.playback.loop
 
@@ -1019,4 +1019,4 @@ However, in case the manifest does not have a label property - the language prop
 
 ##### Description: A specific DRM key system to use.
 
-Now that we've learned about the different options available in the player configuration, let's see [how does the source selection logic works](https://developer.kaltura.com/player/web/source-selection-logic).
+Now that we've learned about the different options available in the player configuration, let's see [how does the source selection logic works](/player/web/source-selection-logic).

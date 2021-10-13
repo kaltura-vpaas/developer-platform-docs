@@ -62,7 +62,7 @@ You'll be able to see your saved player values in the local storage:
 
 ## Disable User Preference
 
-The user preference configuration is enabled by default. To disable it, you'll need to configure the [`disableUserCache`](https://developer.kaltura.com/player/web/configuration-web#configdisableusercache) value as **True** when creating the player instance.
+The user preference configuration is enabled by default. To disable it, you'll need to configure the [`disableUserCache`](/player/web/configuration-web#configdisableusercache) value as **True** when creating the player instance.
 
 {% highlight javascript %}
 {

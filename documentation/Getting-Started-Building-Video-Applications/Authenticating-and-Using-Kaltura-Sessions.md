@@ -8,21 +8,21 @@ weight: 110
 
 Because the Kaltura API is stateless aka [REST](http://en.wikipedia.org/wiki/Representational_state_transfer), every request requires an authentication session aka the Kaltura Session (KS), identifying the account on which the action is to be carried, the authenticated user and its role.
 
-With the client library, it’s easy to set using the [`session.start`](https://developer.kaltura.com/console/service/session/action/start) API action, like this:
+With the client library, it’s easy to set using the [`session.start`](/console/service/session/action/start) API action, like this:
 
 {% code_example session %}
 
 *Specifying an `app id` which contains the name and domain of the app allows you to get specific analytics per application, for cases where you’re running your application on various domains.*
 
-Try it interactively [with this workflow](https://developer.kaltura.com/workflows/Generate_API_Sessions/Authentication). 
+Try it interactively [with this workflow](/workflows/Generate_API_Sessions/Authentication). 
 
 ### Methods for Generating a Kaltura Session  
 
 There are three methods for generating a Kaltura Session:
 
-* Calling the [session.start action](https://developer.kaltura.com/api-docs/Generate_API_Sessions/session/session_start): This method is recommended for scripts and applications to which you alone will have access.
+* Calling the [session.start action](/api-docs/Generate_API_Sessions/session/session_start): This method is recommended for scripts and applications to which you alone will have access.
 * Using the [apptoken service](Application-Tokens.html): This method is recommended when providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
-* Calling the [user.loginByLoginId action](https://developer.kaltura.com/api-docs/Generate_API_Sessions/user_loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password. 
+* Calling the [user.loginByLoginId action](/api-docs/Generate_API_Sessions/user_loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password. 
 
 ## Important Notes When Generating Kaltura Sessions
 
@@ -42,7 +42,7 @@ For information on Kaltura session-based restrictions, refer to [Kaltura’s API
 
 ## Managing End-User Content Entitlements
 
-[Content Entitlements](https://developer.kaltura.com/api-docs/Secure_Control_and_Govern/Content-Categories-Management.html#Managing End-User Content Entitlements) is a method to allow end users access to a group of content items (entries).
+[Content Entitlements](/api-docs/Secure_Control_and_Govern/Content-Categories-Management.html#Managing End-User Content Entitlements) is a method to allow end users access to a group of content items (entries).
 Entitlements are configured on the category level by setting a special unique key to identify the applicative context in which to allow or deny access to the category’s entries.
 
 Applications such as [Kaltura MediaSpace](http://corp.kaltura.com/Products/Video-Applications/Kaltura-Mediaspace-Video-Portal) implement entitlements to achieve the concept of “Authenticated Content Channels”.

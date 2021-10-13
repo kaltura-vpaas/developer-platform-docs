@@ -8,7 +8,7 @@ If you’ve had experience building search capabilities into your video applicat
 
 We’re excited to introduce a new Kaltura search API that will revolutionize how video search is done. Leveraging the Elastic Search engine, eSearch exposes a set of API actions that unlock a variety of search capabilities and simplify how video search is done.
 
-You can try it out yourself in the [console](https://developer.kaltura.com/console/service/eSearch/action/searchEntry) or [workflows](https://developer.kaltura.com/workflows/Search_Discover_and_Personalize) and we’ll demonstrate a few of the cool features below:
+You can try it out yourself in the [console](/console/service/eSearch/action/searchEntry) or [workflows](/workflows/Search_Discover_and_Personalize) and we’ll demonstrate a few of the cool features below:
 
 ## Search Term Highlighting 
 
@@ -422,4 +422,4 @@ $searchResults = $elasticsearchPlugin->eSearch->searchEntry($searchParams, null)
 }
 {% endhighlight %} 
 
-If you're interested in building search into your video experiences, the easy way to learn more about the eSearch API is by trying it out in the [console](https://developer.kaltura.com/console/service/eSearch). 
+If you're interested in building search into your video experiences, the easy way to learn more about the eSearch API is by trying it out in the [console](/console/service/eSearch). 

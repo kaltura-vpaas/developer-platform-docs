@@ -14,7 +14,7 @@ Kaltura players accept a `customVar` argument through the [KAVA](https://github.
 
 ### Configuring Javascript Player
 
-First check in the [KMC](https://kmc.kaltura.com/index.php/kmcng/studio/v3) to make sure the KAVA plugin is enabled on your [player](https://developer.kaltura.com/player/web/getting-started-web): it is enabled by default. 
+First check in the [KMC](https://kmc.kaltura.com/index.php/kmcng/studio/v3) to make sure the KAVA plugin is enabled on your [player](/player/web/getting-started-web): it is enabled by default. 
 
 <img src="/assets/images/kmc_kava.png" alt="kmc_kava" style="zoom:65%;" />
 
@@ -37,7 +37,7 @@ Next configure the player to accept customVar1 via KAVA:
 
 ### Configuring iOS Player
 
-If you refer to the [iOS analytics](https://developer.kaltura.com/player/ios/analytics-plugins-ios) documentation, you will notice the `createKavaConfig` method below accepts `customVar[123]`
+If you refer to the [iOS analytics](/player/ios/analytics-plugins-ios) documentation, you will notice the `createKavaConfig` method below accepts `customVar[123]`
 
 ```swift
 func createKavaConfig() -> KavaPluginConfig {
@@ -49,7 +49,7 @@ func createKavaConfig() -> KavaPluginConfig {
 
 ### Configuring Android Player
 
-Refer to the [android player setup page](https://developer.kaltura.com/player/android/getting-started-android) which also links to the [Android KAVA demo](https://github.com/kaltura/playkit-android-kava) 
+Refer to the [android player setup page](/player/android/getting-started-android) which also links to the [Android KAVA demo](https://github.com/kaltura/playkit-android-kava) 
 
 ```
             //Set your configurations.
@@ -73,7 +73,7 @@ Using the [analytics API](Intro-to-Kaltura-Video-Analytics-and-Best-Practices.md
 
 ### TOP_CONTENT report
 
-Using the [report.getTable](https://developer.kaltura.com/console/service/report/action/getTable) API call, as shown below, a `reportType` of `TOP_CONTENT` is produced and it allows you to filter by string via the `customVar1In` field of `reportInputFilter` 
+Using the [report.getTable](/console/service/report/action/getTable) API call, as shown below, a `reportType` of `TOP_CONTENT` is produced and it allows you to filter by string via the `customVar1In` field of `reportInputFilter` 
 
 <img src="/assets/images/customVar_topContent.png" alt="customVar_topContent" style="zoom:40%;" />
 

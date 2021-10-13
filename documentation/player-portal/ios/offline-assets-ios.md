@@ -23,7 +23,7 @@ In most cases, **DTG** should be used. The only case in which `AVAssetDownloadTa
 
 ### DownloadToGo (DTG)
 
-Kaltura's DTG library can download HLS assets, with and without FairPlay protection. Please look at [DTG's guide](https://developer.kaltura.com/player/ios/download-to-go-ios) for detailed usage instructions - the following focuses on PlayKit+DTG integration.
+Kaltura's DTG library can download HLS assets, with and without FairPlay protection. Please look at [DTG's guide](/player/ios/download-to-go-ios) for detailed usage instructions - the following focuses on PlayKit+DTG integration.
 
 ![](./offline-dtg.svg)
 

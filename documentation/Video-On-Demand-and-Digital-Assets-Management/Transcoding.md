@@ -14,20 +14,20 @@ weight: 110
 
 To make your video accessible and play on any device, Kaltura provides robust API for media transcoding. When transcoding your video, you can control a wide range of parameters, including; output file type, bit-rate, GOP size (keyframe-frequency), frame-rate, frame dimensions, and much more. You can use Kaltura's transcoding services to prepare transcoded videos for optimized playback, download, editing, broadcasting, archive and more.
 
-Flavors are versions of an uploaded source video that was transcoded by Kaltura. You can generate multiple flavors per uploaded file. There is no limit to the number of flavors you can define and use in Kaltura. Each flavor is a single output video file on its own. Flavors are represented in Kaltura by the [flavorAsset service](https://developer.kaltura.com/api-docs/#/flavorAsset).  
-For a list of all the available parameters and options you can set for your transcoded flavors see: [KalturaFlavorParams](https://developer.kaltura.com/api-docs/#/KalturaFlavorParams).
+Flavors are versions of an uploaded source video that was transcoded by Kaltura. You can generate multiple flavors per uploaded file. There is no limit to the number of flavors you can define and use in Kaltura. Each flavor is a single output video file on its own. Flavors are represented in Kaltura by the [flavorAsset service](/api-docs/#/flavorAsset).  
+For a list of all the available parameters and options you can set for your transcoded flavors see: [KalturaFlavorParams](/api-docs/#/KalturaFlavorParams).
 
 Your Kaltura account comes with a default set of flavors preconfigured to seamlessly support any device or browser your users are likely to use. You can choose to enable or disable any of them at any time. To add and configure new flavors to your account use the [flavorParams](http://developer.kaltura.com/api-docs/#/flavorParams) service.
 
-The "source flavor", is the original file that was uploaded to Kaltura. The source flavor represents the highest quality available for that specific video entry. Normally, you would store your source file in Kaltura to continue to generate new flavors from it, cut thumbnails and more. It is also possible to delete the source flavor and mark any of the transcoded flavors as the new source by calling the [flavorAsset.setAsSource action](https://developer.kaltura.com/api-docs/#/flavorAsset.setAsSource).
+The "source flavor", is the original file that was uploaded to Kaltura. The source flavor represents the highest quality available for that specific video entry. Normally, you would store your source file in Kaltura to continue to generate new flavors from it, cut thumbnails and more. It is also possible to delete the source flavor and mark any of the transcoded flavors as the new source by calling the [flavorAsset.setAsSource action](/api-docs/#/flavorAsset.setAsSource).
 
-When a video is uploaded to Kaltura, the video is associated with a [conversionProfile](https://developer.kaltura.com/api-docs/#/conversionProfile), also known as a Transcoding Profile. A Conversion Profile may be comprised of a single or multiple flavors. For each upload session, you can select the Conversion Profile you'd like apply with the uploaded videos. You can also set a default Conversion Profile to be executed automatically when videos are uploaded to your account.  
+When a video is uploaded to Kaltura, the video is associated with a [conversionProfile](/api-docs/#/conversionProfile), also known as a Transcoding Profile. A Conversion Profile may be comprised of a single or multiple flavors. For each upload session, you can select the Conversion Profile you'd like apply with the uploaded videos. You can also set a default Conversion Profile to be executed automatically when videos are uploaded to your account.  
 
 
 
 ## Add a New Conversion Profile
 
-To add a conversion profile, call the [conversionProfile.add](https://developer.kaltura.com/api-docs/#/conversionProfile.add) API action:
+To add a conversion profile, call the [conversionProfile.add](/api-docs/#/conversionProfile.add) API action:
 
 ```php
 <?php 
@@ -48,7 +48,7 @@ $results = $client-> conversionProfile ->add($conversionProfile);
 > Note: Kaltura.com SaaS users - Please contact your Kaltura Account Manager to add new flavor params to your account. Configuration of the transcoding layer requires specialized encoding expertise.
 >  
 
-To add flavor params, call the [flavorParams.add](https://developer.kaltura.com/api-docs/#/flavorParams.add) API action:
+To add flavor params, call the [flavorParams.add](/api-docs/#/flavorParams.add) API action:
 
 ```php
 <?php
@@ -68,7 +68,7 @@ $results = $client->flavorParams->add($flavorParams);
 
 ## Create a New Flavor Asset for an Existing Entry
 
-To create a new flavor asset for an existing entry, call the [flavorAsset.convert](https://developer.kaltura.com/api-docs/#/flavorAsset.convert) API action.
+To create a new flavor asset for an existing entry, call the [flavorAsset.convert](/api-docs/#/flavorAsset.convert) API action.
 
 ```php
 <?php require_once('lib/KalturaClient.php'); 
@@ -120,15 +120,15 @@ You can track your transcoding usage on the [Usage Dashboard](https://kmc.kaltur
 
 ## See Also
 
-[flavorAsset](https://developer.kaltura.com/api-docs/service/flavorAsset)
+[flavorAsset](/api-docs/service/flavorAsset)
 
-[flavorParams](https://developer.kaltura.com/api-docs/service/flavorParams)
+[flavorParams](/api-docs/service/flavorParams)
 
-[flavorParamsOutput](https://developer.kaltura.com/api-docs/service/flavorParamsOutput)
+[flavorParamsOutput](/api-docs/service/flavorParamsOutput)
 
-[conversionProfile](https://developer.kaltura.com/api-docs/service/conversionProfile)
+[conversionProfile](/api-docs/service/conversionProfile)
 
-[conversionProfileAssetParams](https://developer.kaltura.com/api-docs/service/conversionProfileAssetParams)
+[conversionProfileAssetParams](/api-docs/service/conversionProfileAssetParams)
 
-[mediaInfo](https://developer.kaltura.com/api-docs/service/mediaInfo)
+[mediaInfo](/api-docs/service/mediaInfo)
 

@@ -12,7 +12,7 @@ Kaltura supports three types of [metadata](https://knowledge.kaltura.com/help/wh
 
 #### See Also
 
-1. https://developer.kaltura.com/workflows/Enrich_and_Organize_Metadata/Working_with_metadata
+1. /workflows/Enrich_and_Organize_Metadata/Working_with_metadata
 2. https://knowledge.kaltura.com/help/custom-data
 3. https://learning.kaltura.com/media/How+to+reate+and+pply+a+ustom+Metadata+Schema/1_8gofc71k
 4. https://knowledge.kaltura.com/help/how-to-add-a-kaltura-custom-metadata-schema-profile
@@ -24,7 +24,7 @@ Kaltura supports three types of [metadata](https://knowledge.kaltura.com/help/wh
 
 ## Adding Metadata via API
 
-[metadataProfile.add](https://developer.kaltura.com/console/service/metadataProfile/action/add): manages schema profiles per account
+[metadataProfile.add](/console/service/metadataProfile/action/add): manages schema profiles per account
 
 ```javascript
 metadataProfile.add(metadataProfile,xsdData,viewsData)
@@ -38,7 +38,7 @@ The Profile is then parsed, indexed and used to build the new fields on the sele
 
 
 
-[metadata.add](https://developer.kaltura.com/console/service/metadata/action/add): manages metadata xml per object per profile
+[metadata.add](/console/service/metadata/action/add): manages metadata xml per object per profile
 
 ```javascript
 metadata.add(profileId,KalturaMetadataObjectType,objectId, xml)
@@ -46,7 +46,7 @@ metadata.add(profileId,KalturaMetadataObjectType,objectId, xml)
 
 `profileId`–to which metadata profile this relates
 
-`KalturaMetadataObjectType` – see dropdown at [metadata.add](https://developer.kaltura.com/console/service/metadata/action/add)
+`KalturaMetadataObjectType` – see dropdown at [metadata.add](/console/service/metadata/action/add)
 
 `objectId` –the id of the object to add values to
 
@@ -121,11 +121,11 @@ An example metadata string may look like:
 
 ## Object Search By Metadata Fields Values
 
-Search objects via metadata using the [list action](https://developer.kaltura.com/console/service/media/action/list) 
+Search objects via metadata using the [list action](/console/service/media/action/list) 
 
 In the filter parameter, set advancedSearch to KalturaMetadataSearchItem
 
 <img src="/assets/images/metadatasearch.png" alt="metadatasearch" style="zoom:30%;" />
 
-Use [metadataProfile.listFields](https://developer.kaltura.com/console/service/metadataProfile/action/listFields) to get all searchable `xPath` fields
+Use [metadataProfile.listFields](/console/service/metadataProfile/action/listFields) to get all searchable `xPath` fields
 

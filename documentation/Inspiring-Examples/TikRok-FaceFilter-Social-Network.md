@@ -22,7 +22,7 @@ https://tik-rok.herokuapp.com/
 
 ## Design Choices
 
-Many shortcuts were taken in order to give you the barebones, simplest implementation of this concept aka an MVP. I chose a web front end to give a low barrier to entry across any platform. While recording does not work on all mobile browsers, the face filters do, and a more robust implementation could make use of Kaltura's many [Client Libraries](https://developer.kaltura.com/api-docs/Client_Libraries) 
+Many shortcuts were taken in order to give you the barebones, simplest implementation of this concept aka an MVP. I chose a web front end to give a low barrier to entry across any platform. While recording does not work on all mobile browsers, the face filters do, and a more robust implementation could make use of Kaltura's many [Client Libraries](/api-docs/Client_Libraries) 
 
 ## This is just a kernel...
 
@@ -169,11 +169,11 @@ in `deform.js`
 
 ### Setup Kaltura Express Recorder
 
-In `views/record.ejs` we will use the [Kaltura Express Recorder](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/express-recorder.html), which has the option to record a canvas element and combine it with your webcam's audio. 
+In `views/record.ejs` we will use the [Kaltura Express Recorder](/api-docs/Ingest_and_Upload_Media/express-recorder.html), which has the option to record a canvas element and combine it with your webcam's audio. 
 
 **Note**:The github for TikRok includes a forked "canvas" version of express recorder named `kaltura-canvas-express-recorder.js`
 
-1. `<div id="controls"` is where the [Kaltura Express Recorder](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/express-recorder.html) controls will be injected. These elements must all have the same video size to render properly. Now to instantiate the express recorder:
+1. `<div id="controls"` is where the [Kaltura Express Recorder](/api-docs/Ingest_and_Upload_Media/express-recorder.html) controls will be injected. These elements must all have the same video size to render properly. Now to instantiate the express recorder:
 
 ```javascript
 			 const expressRec = Kaltura.ExpressRecorder.create('controls', {
@@ -188,7 +188,7 @@ In `views/record.ejs` we will use the [Kaltura Express Recorder](https://develop
         });
 ```
 
-We have supplied all relevant id strings from node,  and we specify the canvas to record via `canvasId` [Kaltura Express Recorder](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/express-recorder.html) has many more configuration options and event listeners. 
+We have supplied all relevant id strings from node,  and we specify the canvas to record via `canvasId` [Kaltura Express Recorder](/api-docs/Ingest_and_Upload_Media/express-recorder.html) has many more configuration options and event listeners. 
 
 2. We will also use the express recorder's event listener interface to create a better UX:
 
@@ -221,13 +221,13 @@ We have supplied all relevant id strings from node,  and we specify the canvas t
 
 ## The Gallery :
 
-We are taking a very MVP approach to displaying the gallery with a simplifying assumption: this app will be the only source of videos connected to your account. If you want more control over how to organize videos, check out [Playlists](https://developer.kaltura.com/api-docs/service/playlist)
+We are taking a very MVP approach to displaying the gallery with a simplifying assumption: this app will be the only source of videos connected to your account. If you want more control over how to organize videos, check out [Playlists](/api-docs/service/playlist)
 
-The express recorder creates a [Kaltura Media Entry](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaMediaEntry) for your video and associates it with your user id. Our approach will simply list all media in our account via the [Media.list](https://developer.kaltura.com/console/service/media/action/list) API call 
+The express recorder creates a [Kaltura Media Entry](/api-docs/General_Objects/Objects/KalturaMediaEntry) for your video and associates it with your user id. Our approach will simply list all media in our account via the [Media.list](/console/service/media/action/list) API call 
 
 ### Kaltura API Console
 
-When you look at [Media.list](https://developer.kaltura.com/console/service/media/action/list) in the console: 
+When you look at [Media.list](/console/service/media/action/list) in the console: 
 
 ![MEDIALIST](/assets/images/tikrok/MEDIALIST.png)
 
@@ -273,7 +273,7 @@ We are using https://github.com/kaltura/VideoThumbnailAnimator in `views/gallery
 
 ### Querying for user's Kaltura Media Entries
 
-To display a users videos, We will use [Media.list](https://developer.kaltura.com/console/service/media/action/list) but this time we will filter by userId. You can build this query using the API Console:
+To display a users videos, We will use [Media.list](/console/service/media/action/list) but this time we will filter by userId. You can build this query using the API Console:
 
 ```javascript
 let filter = new kaltura.objects.MediaEntryFilter
@@ -292,7 +292,7 @@ kaltura.services.media.listAction(filter, pager)
 
 in `views/user.ejs`
 
-We will be following the steps to set up a player from https://developer.kaltura.com/player/web/getting-started-web 
+We will be following the steps to set up a player from /player/web/getting-started-web 
 
 ```ejs
 <script type="text/javascript" 

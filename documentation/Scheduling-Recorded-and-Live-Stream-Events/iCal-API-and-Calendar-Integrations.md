@@ -12,14 +12,14 @@ The Scheduled Events API is also exposed as a standard [iCal format](https://en.
 
 2. As an iCal file synced form a third-party hosted Drop-Folders over FTP, SFTP or S3. 
 
-3. The iCal file format may also be ingested using the [`scheduleEvent.addFromBulkUpload`](https://developer.kaltura.com/api-docs/service/scheduleEvent/action/addFromBulkUpload) API action.
+3. The iCal file format may also be ingested using the [`scheduleEvent.addFromBulkUpload`](/api-docs/service/scheduleEvent/action/addFromBulkUpload) API action.
 
    
 
 ## Download / Sync the iCal Schedule from Kaltura 
 
 iCal provides a standardized method for syncing calendar events from Kaltura. 
-To retrieving an iCal file format, add `format/ical` to the [scheduleEvent.list](https://developer.kaltura.com/api-docs/service/scheduleEvent/action/list) API action.
+To retrieving an iCal file format, add `format/ical` to the [scheduleEvent.list](/api-docs/service/scheduleEvent/action/list) API action.
 
 For example:
 
@@ -38,7 +38,7 @@ The Kaltura iCal Format follows the standard iCal format definitions, and adds K
 | X-KALTURA-ID                      	| The ID of the Scheduled Event in Kaltura                                                                                                                                   	| int                                                                                                                         	|
 | X-KALTURA-PARTNER-ID              	| The Kaltura Account ID ([Partner ID](https://kmc.kaltura.com/index.php/kmcng/settings/integrationSettings))                                                                	| int                                                                                                                         	|
 | X-KALTURA-PARENT-ID               	| If a single occurrence as part of a series (recurring event), the parent ID will be the ID of the recurring event.                                                         	| int                                                                                                                         	|
-| X-KALTURA-STATUS                  	| Status of the event in Kaltura                                                                                                                                             	| int ([KalturaScheduleEventStatus](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaScheduleEventStatus)) 	|
+| X-KALTURA-STATUS                  	| Status of the event in Kaltura                                                                                                                                             	| int ([KalturaScheduleEventStatus](/api-docs/General_Objects/Enums/KalturaScheduleEventStatus)) 	|
 | X-KALTURA-CATEGORY-IDS            	| The list of categories to which the event belongs                                                                                                                          	| Unlimited, comma-separated IDs (Integers)                                                                                   	|
 | X-KALTURA-ENTRY-IDS               	| The Entry IDs related to this event                                                                                                                                        	| Unlimited, comma separated String IDs; each string is exactly 10 ASCII characters (0-1, a-z and underscore).                	|
 | X-KALTURA-RESOURCE-IDS            	| The Kaltura resource ID for the resources used in the event                                                                                                                	| Unlimited, comma-separated integers                                                                                         	|

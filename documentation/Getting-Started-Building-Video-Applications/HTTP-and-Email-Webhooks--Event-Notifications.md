@@ -5,7 +5,7 @@ weight: 303
 ---
 
 
-Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update. This guide will take you through the steps of listening to these events, called [Event Notifications](https://developer.kaltura.com/api-docs/#/eventNotificationTemplate), how to parse the data carried in these notifications, and how to respond properly in your applications.
+Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update. This guide will take you through the steps of listening to these events, called [Event Notifications](/api-docs/#/eventNotificationTemplate), how to parse the data carried in these notifications, and how to respond properly in your applications.
 
 Kaltura Notifications are HTTP POST requests that are sent by the Kaltura server to any defined accessible web URL whenever specific Kaltura events happen (e.g., Entry added, deleted, etc.).
 
@@ -14,7 +14,7 @@ Utilizing Kaltura Server Notifications allows applications to achieve the follow
 *   Easily respond on a "push form" whenever media events occur on the Kaltura server.
 *   Implement a synchronized local management instance of media related metadata and thumbnails for improving website performance. This may include local media searching and caching capabilities.
 
-The full list of notifications sent by the Kaltura server are available in the [Kaltura Notifications API docs](https://developer.kaltura.com/workflows/Integration_Scheduling_and_Hooks/Backend_and_Email_Notifications).
+The full list of notifications sent by the Kaltura server are available in the [Kaltura Notifications API docs](/workflows/Integration_Scheduling_and_Hooks/Backend_and_Email_Notifications).
 
 ## Configuring The Kaltura API Notifications PHP Client  
 

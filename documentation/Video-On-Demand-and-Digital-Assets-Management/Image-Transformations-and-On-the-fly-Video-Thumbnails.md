@@ -4,7 +4,7 @@ title: On-the-fly Video Thumbnails and Image Transformations
 weight: 110
 ---
 
-The Kaltura API provides a special thumbnail service, aimed at simplifying the creation of thumbnails on-the-fly from video and image entries. (For the static thumbnail assets management API refer to the [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset)) There is also a [legacy Thumbnail API]()
+The Kaltura API provides a special thumbnail service, aimed at simplifying the creation of thumbnails on-the-fly from video and image entries. (For the static thumbnail assets management API refer to the [thumbAsset](/api-docs/#/thumbAsset)) There is also a [legacy Thumbnail API]()
 
 # Interactive Demo
 

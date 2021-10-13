@@ -4,11 +4,11 @@ title: Webcasting Analytics
 weight: 110
 ---
 
-Analytics for the livestream event can be retrieved via the [reporting](https://developer.kaltura.com/console/service/report/) API. The API actions are split between `getTable`, `getGraph`, `getTotal`, etc - depending on the format in which you'd like to receive the data. 
+Analytics for the livestream event can be retrieved via the [reporting](/console/service/report/) API. The API actions are split between `getTable`, `getGraph`, `getTotal`, etc - depending on the format in which you'd like to receive the data. 
 
 There is also a webcasting module that is part of  [Embedded Analytics Reports](../Analytics-and-Reporting /Embedded-Analytics-Reports.md) 
 
-In this guide, the types of reports will be demonstrated using the [report.getTable](https://developer.kaltura.com/console/service/report/action/getTable) to make it easy to view results. 
+In this guide, the types of reports will be demonstrated using the [report.getTable](/console/service/report/action/getTable) to make it easy to view results. 
 
 If you scroll through the `reportType` field, you'll see that Realtime reports are those with REALTIME in the name, from 10001, to 10013. 
 

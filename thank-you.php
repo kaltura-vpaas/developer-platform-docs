@@ -81,15 +81,15 @@ The Kaltura Player is the building block by which you deliver video experiences 
               <br />
               There are three methods for generating a Kaltura Session:</p>
               <ul class="case-study-template-list-wrapper-bullets">
-                <li class="thank-you-li-bullets">Calling the&nbsp;<span class="code-highlight"><a href="https://developer.kaltura.com/api-docs/Generate_API_Sessions/session/session_start" target="_blank">session.start</a></span>&nbsp;action. This method is recommended for scripts and applications that only you will have access to.</li>
-                <li class="thank-you-li-bullets">Calling&nbsp;<span class="code-highlight"><a href="https://developer.kaltura.com/api-docs/Generate_API_Sessions/user_loginByLoginId" target="_blank">user.loginByLoginId</a></span> action. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password. When you login to the <a href="http://www.kaltura.com/index.php/kmc" target="_blank">Kaltura Management Console</a>, the KMC app calls the user.loginByLoginId action to authenticate you using your registered email and password.</li>
-                <li class="thank-you-li-bullets">Using the&nbsp;<span class="code-highlight"><a href="https://developer.kaltura.com/workflows/Generate_API_Sessions/App_Token_Authentication" target="_blank">appToken</a></span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access to specific applications, and more.</li>
+                <li class="thank-you-li-bullets">Calling the&nbsp;<span class="code-highlight"><a href="/api-docs/Generate_API_Sessions/session/session_start" target="_blank">session.start</a></span>&nbsp;action. This method is recommended for scripts and applications that only you will have access to.</li>
+                <li class="thank-you-li-bullets">Calling&nbsp;<span class="code-highlight"><a href="/api-docs/Generate_API_Sessions/user_loginByLoginId" target="_blank">user.loginByLoginId</a></span> action. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password. When you login to the <a href="http://www.kaltura.com/index.php/kmc" target="_blank">Kaltura Management Console</a>, the KMC app calls the user.loginByLoginId action to authenticate you using your registered email and password.</li>
+                <li class="thank-you-li-bullets">Using the&nbsp;<span class="code-highlight"><a href="/workflows/Generate_API_Sessions/App_Token_Authentication" target="_blank">appToken</a></span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access to specific applications, and more.</li>
               </ul>
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
-                  <li><a href="https://developer.kaltura.com/workflows/Generate_API_Sessions/Authentication" target="_blank">Creating KS using session or user services.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Generate_API_Sessions/App_Token_Authentication" target="_blank">Managing applications access with the appTokens service.</a></li>
+                  <li><a href="/workflows/Generate_API_Sessions/Authentication" target="_blank">Creating KS using session or user services.</a></li>
+                  <li><a href="/workflows/Generate_API_Sessions/App_Token_Authentication" target="_blank">Managing applications access with the appTokens service.</a></li>
                 </ul>
               </blockquote>
               
@@ -101,13 +101,13 @@ The Kaltura Player is the building block by which you deliver video experiences 
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
-                  <li><a href="https://developer.kaltura.com/workflows/Ingest_and_Upload_Media" target="_blank">Create and upload on-demand media files.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Live_Stream_and_Broadcast" target="_blank">Create live broadcast and stream live from webcam.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Search_Discover_and_Personalize/Kaltura_Media_Library_Search" target="_blank">List and search entries.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Enrich_and_Organize_Metadata/Working_with_metadata" target="_blank">Work with custom metadata.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Engage_and_Publish/Cue_Points" target="_blank">Timed metadata using cue points.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Enrich_and_Organize_Metadata/Captions" target="_blank">Upload captions and run in-video search.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Integration_Scheduling_and_Hooks/Backend_and_Email_Notifications" target="_blank">Working with Backend and Email Notifications.</a></li>
+                  <li><a href="/workflows/Ingest_and_Upload_Media" target="_blank">Create and upload on-demand media files.</a></li>
+                  <li><a href="/workflows/Live_Stream_and_Broadcast" target="_blank">Create live broadcast and stream live from webcam.</a></li>
+                  <li><a href="/workflows/Search_Discover_and_Personalize/Kaltura_Media_Library_Search" target="_blank">List and search entries.</a></li>
+                  <li><a href="/workflows/Enrich_and_Organize_Metadata/Working_with_metadata" target="_blank">Work with custom metadata.</a></li>
+                  <li><a href="/workflows/Engage_and_Publish/Cue_Points" target="_blank">Timed metadata using cue points.</a></li>
+                  <li><a href="/workflows/Enrich_and_Organize_Metadata/Captions" target="_blank">Upload captions and run in-video search.</a></li>
+                  <li><a href="/workflows/Integration_Scheduling_and_Hooks/Backend_and_Email_Notifications" target="_blank">Working with Backend and Email Notifications.</a></li>
                 </ul>
               </blockquote>
               
@@ -126,7 +126,7 @@ The Kaltura Player is the building block by which you deliver video experiences 
                   <li><a href="http://player.kaltura.com/docs/responsive" target="_blank">Example reference for responsive player embed.</a></li>
                   <li><a href="http://player.kaltura.com/docs/thumb" target="_blank">JavaScript function thmbnail embed (click turns thumbnail to player).</a></li>
                   <li><a href="http://player.kaltura.com/docs/NativeCallout" target="_blank">Enables a robust web to native bridge.</a></li>
-                  <li><a href="https://developer.kaltura.com/workflows/Engage_and_Publish/Player_UI_conf" target="_blank">Working with the uiConf service.</a></li>
+                  <li><a href="/workflows/Engage_and_Publish/Player_UI_conf" target="_blank">Working with the uiConf service.</a></li>
                 </ul>
               </blockquote>
 

@@ -51,7 +51,7 @@ Next, you'll need to dispatch an `Error` event:
 player.dispatchEvent(new FakeEvent(player.Event.Error, myError));
 {% endhighlight %}
 
-> You can find additional information about dispatching events [here](https://developer.kaltura.com/player/web/player-events-web).
+> You can find additional information about dispatching events [here](/player/web/player-events-web).
 
 ## Using Debug Mode to See Explicit Error Messages
 
@@ -61,6 +61,6 @@ Use the debug mode in the player to view explicit error messages in the console,
 [Error] Category:1 | Code:1002 | 'Http Error'
 ```
 
-> You can find additional information about debugging and troubleshooting the player [here](https://developer.kaltura.com/player/web/debugging-web). 
+> You can find additional information about debugging and troubleshooting the player [here](/player/web/debugging-web). 
 
 

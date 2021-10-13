@@ -12,7 +12,7 @@ This guide will walk you through the steps of creating a **virtual meeting room 
 
 To use the Kaltura API, you'll need a Kaltura account and credentials. The important credentials can be found in the [Integration Settings]( https://kmc.kaltura.com/index.php/kmcng/settings/integrationSettings) in your KMC. 
 
-You might want to download a [Kaltura Client Library](https://developer.kaltura.com/api-docs/Client_Libraries/) of your choice, although you can also use the [developer console](https://developer.kaltura.com/console) for all the operations mentioned below. 
+You might want to download a [Kaltura Client Library](/api-docs/Client_Libraries/) of your choice, although you can also use the [developer console](/console) for all the operations mentioned below. 
 
 This integration will be using your KAF endpoint, which should contain your Partner ID. If you're not sure whether you have a KAF endpoint or whether "Newrow" has been enabled on your account, speak to your account rep or email us at vpaas@kaltura.com.
 
@@ -28,7 +28,7 @@ A virtual meeting room is represented as a `KalturaLocationScheduleResource`. A 
 
 ## Creating an Admin Session 
 
-A Kaltura Session is an identification string that authorizes calls to the Kaltura API. You'll need one to create the resource and event objects. If you're logged into the [developer portal](https://developer.kaltura.com), you're already authenticated. However, if you're calling the Kaltura API using a client library, you'll need to create the string yourself using the [`session.start`](https://developer.kaltura.com/console/service/session/action/start) API. 
+A Kaltura Session is an identification string that authorizes calls to the Kaltura API. You'll need one to create the resource and event objects. If you're logged into the [developer portal](), you're already authenticated. However, if you're calling the Kaltura API using a client library, you'll need to create the string yourself using the [`session.start`](/console/service/session/action/start) API. 
 
 You can find the necessary credentials in your KMC [Integration Settings](https://kmc.kaltura.com/index.php/kmcng/settings/integrationSettings). You'll use your ADMIN Secret for this operation. 
 
@@ -46,11 +46,11 @@ You'll set this KS on the Client that handles all the operations detailed below.
 
 ## Creating a Resource 
 
-A schedule resource is created using the [`scheduleResource.add`](https://developer.kaltura.com/console/service/scheduleResource/action/add) action, which will return a `KalturaLocationScheduleResource` object. 
+A schedule resource is created using the [`scheduleResource.add`](/console/service/scheduleResource/action/add) action, which will return a `KalturaLocationScheduleResource` object. 
 The resource *must* have a name, and it should include **tags** of `vcprovider:newrow` in order to be recognized as a virtual meeting room. 
 
 Once created, the response will return an `id`, which you should hold on to. 
-However, if you've lost track of it - no worries. You can see all of your scheduled resources by calling [`scheduleResource.list`](https://developer.kaltura.com/console/service/scheduleResource/action/list). 
+However, if you've lost track of it - no worries. You can see all of your scheduled resources by calling [`scheduleResource.list`](/console/service/scheduleResource/action/list). 
 
 **Note that you should be using an ADMIN Kaltura Session for this creation.**
 
@@ -109,7 +109,7 @@ Tags can also include the URL for a logo or optional parameters for initializing
 
 ## Creating an Event 
 
-You'll use the [`scheduleEvent.add`](https://developer.kaltura.com/console/service/scheduleEvent/action/add) action to create an event of type `KalturaRecordScheduleEvent`. This action must include a summary, startDate and endDate, and a recurrence type of NONE. 
+You'll use the [`scheduleEvent.add`](/console/service/scheduleEvent/action/add) action to create an event of type `KalturaRecordScheduleEvent`. This action must include a summary, startDate and endDate, and a recurrence type of NONE. 
 
 ### Required Parameters 
 
@@ -127,7 +127,7 @@ You'll use the [`scheduleEvent.add`](https://developer.kaltura.com/console/servi
 - **location**: (string) geographical location of the event 
 - **tags**: (string) see below 
 
-The creation of the event will return an `id`. Hold on to that as well. And once again, if you've lost track of it, you can use [`scheduleEvent.list`](https://developer.kaltura.com/console/service/scheduleEvent/action/list) to see all of your created events. 
+The creation of the event will return an `id`. Hold on to that as well. And once again, if you've lost track of it, you can use [`scheduleEvent.list`](/console/service/scheduleEvent/action/list) to see all of your created events. 
 
 ### Tags / Event Settings  
 
@@ -210,7 +210,7 @@ This event will take place on April 6th 2020 from 3-4pm GMT, with a Spanish inte
 
 An event *must* be associated with a resource. As mentioned, the same resource (room) can be launched at many different times with different events. This allows you to keep specific resources inside a virtual room; for example, for the same class that is taught numerous times with the same lesson plan. 
 
-To associate a session with an event, use the [`scheduleEventResource.add`](https://developer.kaltura.com/console/service/scheduleEventResource/action/add) action. This is where you'll need the resource Id and the event Id that you just created. 
+To associate a session with an event, use the [`scheduleEventResource.add`](/console/service/scheduleEventResource/action/add) action. This is where you'll need the resource Id and the event Id that you just created. 
 
 ### Example 
 
@@ -247,13 +247,13 @@ This Scheduled Event will take place in Room-1 on April 6th 2020 at 3pm GMT.
 
 A virtual meeting room is authenticated by using a Kaltura Session (KS), which is what identifies the user and contains permissions. 
 
-We'll create the KS by using the [session.start](https://developer.kaltura.com/console/service/session/action/start) action. You'll need:
+We'll create the KS by using the [session.start](/console/service/session/action/start) action. You'll need:
 - Your `PartnerID` from the [integration settings](https://kmc.kaltura.com/index.php/kmcng/settings/integrationSettings) in your KMC
 - The **USER** `Secret` from the [integration settings](https://kmc.kaltura.com/index.php/kmcng/settings/integrationSettings) in your KMC
 - `userId`, which can be any identifying string, but must be unique to each user in the room 
 - `privileges` string, described below
 
->Tip: if you're logged into the [developer.portal](https://developer.kaltura.com), you can find your credentials by clicking your account at the top right corner and then **View Secrets**
+>Tip: if you're logged into the [developer.portal](), you can find your credentials by clicking your account at the top right corner and then **View Secrets**
 
 
 ### The Privileges String 

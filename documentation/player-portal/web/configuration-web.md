@@ -59,7 +59,7 @@ Possible values: `"DEBUG", "INFO", "TIME", "WARN", "ERROR", "OFF"`
 
 ##### Description: Indicates whether to stop using the saved user preferences.
 
-You can learn more about user preferences in the player [here](https://developer.kaltura.com/player/web/user-preferences-web).
+You can learn more about user preferences in the player [here](/player/web/user-preferences-web).
 
 ### config.playback
 
@@ -75,7 +75,7 @@ You can learn more about user preferences in the player [here](https://developer
 
 ### config.playlist
 
-##### Type: [KPPlaylistObject](https://developer.kaltura.com/player/web/api-web#kpplaylistobject)
+##### Type: [KPPlaylistObject](/player/web/api-web#kpplaylistobject)
 
 ##### Description: Defines the playlist configuration.
 
@@ -105,7 +105,7 @@ You can learn more about user preferences in the player [here](https://developer
 
 ### config.cast
 
-##### Type: [CastConfigObject](https://developer.kaltura.com/player/web/api-web#castconfigobject)
+##### Type: [CastConfigObject](/player/web/api-web#castconfigobject)
 
 ##### Description: Defines the cast configuration.
 

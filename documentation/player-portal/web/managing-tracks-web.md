@@ -211,4 +211,4 @@ player.hideTextTrack();
 >
 > A Text Track has language and label properties. The label is set by the label property in the manifest.
 > However, in case the manifest does not have a label property - the language property will be set as the tracks label.
-> You can set a custom label to a Text Track - read about it [here](https://developer.kaltura.com/player/web/configuration-playkit-web#configcustomlabels)
+> You can set a custom label to a Text Track - read about it [here](/player/web/configuration-playkit-web#configcustomlabels)

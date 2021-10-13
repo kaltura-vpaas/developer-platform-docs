@@ -9,11 +9,11 @@ weight: 110
 The Kaltura VPaaS offers many ways for ingesting content; a file upload API, bulk files import using CSV or XML, MRSS ingest services, and various widgets you can integrate into your workflows or sites, to allow user contributions and build custom upload interfaces.
 Find the suitable ingestion methodologies for your workflow below:
 
-* [File Upload and Import REST APIs](https://developer.kaltura.com/workflows/Ingest_and_Upload_Media)
+* [File Upload and Import REST APIs](/workflows/Ingest_and_Upload_Media)
   * [Web Upload in JavaScript/jQuery (with chunked parallel pause-resume support)](https://github.com/kaltura/chunked-file-upload-jquery)
   * [Upload in Java](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java)
 * [Bulk Upload XML and CSV formats](/api-docs/Ingest_and_Upload_Media/Bulk-Content-Ingestion.html)
-* [Live Streaming and Webcam Recording](https://developer.kaltura.com/workflows/Live_Stream_and_Broadcast)
+* [Live Streaming and Webcam Recording](/workflows/Live_Stream_and_Broadcast)
 * [Drop Folders and Aspera](https://knowledge.kaltura.com/node/737)
 
 ## Upload File Example
@@ -22,7 +22,7 @@ You can also refer to this [recipe](https://developer.kaltura.org/recipes/upload
 
 **Step 1: Create an Upload Token**
 
-You’ll use [`uploadToken.add`](https://developer.kaltura.com/console/service/uploadToken/action/add) to create an uploadToken for your new video.
+You’ll use [`uploadToken.add`](/console/service/uploadToken/action/add) to create an uploadToken for your new video.
 
 {% code_example media1 %}
 &nbsp;
@@ -45,14 +45,14 @@ To upload manually, continue following the steps:
 
 **Step 2: Upload the File Data**
 
-We’ll call [`uploadToken.upload`](https://developer.kaltura.com/console/service/uploadToken/action/upload) to upload a new video file using the newly created token. If you don't have a video file handy, you can right-click [this link](http://cfvod.kaltura.com/pd/p/811441/sp/81144100/serveFlavor/entryId/1_2bjlk7qb/v/2/flavorId/1_d1ft34uv/fileName/Kaltura_Logo_Animation.flv/name/a.flv) to save a sample video of Kaltura's logo. In the case of large files, `resume` should be set to `true` and `finalChunk` is set to `false` until the final chunk. `resumeAt` determines at which byte to chunk the next fragment. 
+We’ll call [`uploadToken.upload`](/console/service/uploadToken/action/upload) to upload a new video file using the newly created token. If you don't have a video file handy, you can right-click [this link](http://cfvod.kaltura.com/pd/p/811441/sp/81144100/serveFlavor/entryId/1_2bjlk7qb/v/2/flavorId/1_d1ft34uv/fileName/Kaltura_Logo_Animation.flv/name/a.flv) to save a sample video of Kaltura's logo. In the case of large files, `resume` should be set to `true` and `finalChunk` is set to `false` until the final chunk. `resumeAt` determines at which byte to chunk the next fragment. 
 
 {% code_example media2 %}
 &nbsp;
 
 **Step 3: Creating the Kaltura Media Entry**
 
-Here’s where you’ll set your video’s name and description use [`media.add`](https://developer.kaltura.com/console/service/media/action/add) to create the entry.
+Here’s where you’ll set your video’s name and description use [`media.add`](/console/service/media/action/add) to create the entry.
 
 {% code_example media3 %}
 &nbsp;
@@ -62,7 +62,7 @@ The Kaltura Entry is a logical object that package all of the related assets to 
 
 **Step 4: Attach the Video**
 
-Now that you have your entry, you need to associate it with the uploaded video token using [`media.addContent`](https://developer.kaltura.com/console/service/media/action/addContent). 
+Now that you have your entry, you need to associate it with the uploaded video token using [`media.addContent`](/console/service/media/action/addContent). 
 
 {% code_example media4 %}
 &nbsp;

@@ -8,15 +8,15 @@ The Kaltura Analytics API reports provide you with the insight you need to manag
 
 ## Report Service
 
-Kaltura analytics data is exposed via the [`Report Service`](https://developer.kaltura.com/console/service/report).   
+Kaltura analytics data is exposed via the [`Report Service`](/console/service/report).   
 A number of actions within this service will enable you to pull data for Content, User Engagement, Bandwidth and Storage, and System. A specific set of filters will ensure you get the insights you need. 
 
-You can follow the [Interactive Code Workflow,](https://developer.kaltura.com/workflows/Review_Media_Analytics/Analytics_Reports) or continue reading to learn about a few basic reports:
+You can follow the [Interactive Code Workflow,](/workflows/Review_Media_Analytics/Analytics_Reports) or continue reading to learn about a few basic reports:
 
-The Report API contains a couple of different actions for returning data. For the purpose of this doc, we will use [`report.getTable`](https://developer.kaltura.com/console/service/report/action/getTable), which returns an object of the insights data, as well as the respective column headers. Other actions include [`report.getGraphs`](https://developer.kaltura.com/console/service/report/action/getGraphs) which returns points for a graph UI, and [`report.getUrlForReportAsCsv`](https://developer.kaltura.com/console/service/report/action/getUrlForReportAsCsv), which produces a CSV report based on your given headers. 
+The Report API contains a couple of different actions for returning data. For the purpose of this doc, we will use [`report.getTable`](/console/service/report/action/getTable), which returns an object of the insights data, as well as the respective column headers. Other actions include [`report.getGraphs`](/console/service/report/action/getGraphs) which returns points for a graph UI, and [`report.getUrlForReportAsCsv`](/console/service/report/action/getUrlForReportAsCsv), which produces a CSV report based on your given headers. 
 
 For any `report.getTable` action, you need: 
-- **reportType:** Object enum or integer (list of types found [here](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaReportType)) that determines the type of report to produce 
+- **reportType:** Object enum or integer (list of types found [here](/api-docs/General_Objects/Enums/KalturaReportType)) that determines the type of report to produce 
 - **reportInputFilter:** Can be of type `KalturaReportInputFilter` or `KalturaEndUserReportInputFilter`. It is required, and allows you to set date range, specific categories, keywords, or custom variables. 
 - **pager:** Unlike some other Kaltura APIs, a pager is always required for this action. It contains the `pageIndex` and `pageSize` (number of results you'd like per page). 
 

@@ -18,7 +18,7 @@ Before loading a playlist, you'll need to set up a Kaltura Player instance:
  player = KalturaOvpPlayer.create(this@MainActivity, playerInitOptions)
 ```
 
-To learn how to set up a Kaltura Player, please go over this document: [getting-started-android](https://developer.kaltura.com/player/android/getting-started-android).
+To learn how to set up a Kaltura Player, please go over this document: [getting-started-android](/player/android/getting-started-android).
 <br>Once you have a Kaltura Player instance, you can load a playlist using one of the following methods:
 
 #### By Playlist ID (OVP Only)

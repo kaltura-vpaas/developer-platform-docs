@@ -20,11 +20,11 @@ For a better understanding of this integration, check out the [Python sample app
 
 See the https://github.com/kaltura-vpaas/embeddable_analytics project which has an entry for webcasting under the "livestream" tab
 
-Kaltura also has a rich Analytics API that can allow you to generate your own reports for your webcasts. You can get started with https://developer.kaltura.com/console/service/report/action/getTable and selecting LIVE in the reportType dropdown. 
+Kaltura also has a rich Analytics API that can allow you to generate your own reports for your webcasts. You can get started with /console/service/report/action/getTable and selecting LIVE in the reportType dropdown. 
 
 ## Creating a LiveStream Object 
 
-At the basis of a Kaltura Webcast is a Live Stream (non-interactive live broadcast). To create a webcast stream you'll first need to create a [LiveStream](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaLiveStreamEntry) object, which we'll do using the [liveStream.add](https://developer.kaltura.com/console/service/liveStream/action/add) action. Then we'll add some configurations in order to turn this live stream into an interactive webcast. 
+At the basis of a Kaltura Webcast is a Live Stream (non-interactive live broadcast). To create a webcast stream you'll first need to create a [LiveStream](/api-docs/General_Objects/Objects/KalturaLiveStreamEntry) object, which we'll do using the [liveStream.add](/console/service/liveStream/action/add) action. Then we'll add some configurations in order to turn this live stream into an interactive webcast. 
 
 We'll be creating an object with **`sourceType`** of `LIVE_STREAM [32]` with the parameters described here: 
 
@@ -45,7 +45,7 @@ We'll be creating an object with **`sourceType`** of `LIVE_STREAM [32]` with the
 
 
 > * **explicitLive** : If set to true, only a KS with the `restrictexplicitliveview` privilege will be allowed to watch the stream before it is live (determined by the `isLive` flag). If set to false, the preview will not be available to any viewers, and `isLive` will be set automatically when the broadcast begins.   
-> * **conversionProfileId**: Use [`conversionProfile.list`](https://developer.kaltura.com/console/service/conversionProfile/action/list) with filter of `typeEqual = KalturaConversionProfileType.LIVE_STREAM[2]` to find the profile IDs for cloud transcoding or passthrough
+> * **conversionProfileId**: Use [`conversionProfile.list`](/console/service/conversionProfile/action/list) with filter of `typeEqual = KalturaConversionProfileType.LIVE_STREAM[2]` to find the profile IDs for cloud transcoding or passthrough
 
 
 ### RecordingOptions 
@@ -130,7 +130,7 @@ When the webcasting module is enabled on your account, two metadata profiles get
 
 ### Retrieving Metadata Profiles 
 
-The auto-generated profiles are created with the names `KMS_KWEBCAST2` and `KMS_EVENTS3`. In order to use these profiles, you'll need the specific instances found in your account, so we'll use the [metadataProfile.list](https://developer.kaltura.com/console/service/metadataProfile/action/list) API to filter on the **systemName** and get the respective profile IDs. 
+The auto-generated profiles are created with the names `KMS_KWEBCAST2` and `KMS_EVENTS3`. In order to use these profiles, you'll need the specific instances found in your account, so we'll use the [metadataProfile.list](/console/service/metadataProfile/action/list) API to filter on the **systemName** and get the respective profile IDs. 
 
 ```python
 filter = KalturaMetadataProfileFilter()
@@ -148,7 +148,7 @@ You'll get a metadata profile that contains an XSD object, or [XML schema](https
 
 The XML defined by the KMS_KWEBCAST2 schema contains the following fields:
 
-* `SlidesDocEntryId`: Representing Entry ID of the presentation slides entry (read more about [documents](https://developer.kaltura.com/api-docs/service/documents))
+* `SlidesDocEntryId`: Representing Entry ID of the presentation slides entry (read more about [documents](/api-docs/service/documents))
 * `IsKwebcastEntry` - Boolean (0/1) indicates whether this is a live stream entry of type Interactive Webcast
 * `IsSelfServe` - Boolean (0/1) indicates whether WebRTC-based self-broadcast should be enabled inside the Webcasting Studio Application (if set to false, the webcasting app will enable the use of an external encoder).
 
@@ -163,7 +163,7 @@ The XML defined by the KMS_KWEBCAST2 schema contains the following fields:
 </metadata>
 ```
 
-The custom metadata is then updated using [`metadata.add`](https://developer.kaltura.com/console/service/metadata/action/add):
+The custom metadata is then updated using [`metadata.add`](/console/service/metadata/action/add):
 
 ```python
 metadata_profile_id = "<metadata profile ID retrieved above>"
@@ -174,7 +174,7 @@ xml_data = "<XML string>"
 client.metadata.metadata.add(metadata_profile_id, object_type, object_id, xml_data)
 ```
 
-That will return an object with a `metadataRecordId`, which you can use at any point for an update using [`metadata.update`](https://developer.kaltura.com/console/service/metadata/action/update): 
+That will return an object with a `metadataRecordId`, which you can use at any point for an update using [`metadata.update`](/console/service/metadata/action/update): 
 
 ```python
 saved_metadata = client.metadata.metadata.update(metadata_record_id, xml_data)
@@ -182,7 +182,7 @@ saved_metadata = client.metadata.metadata.update(metadata_record_id, xml_data)
 
 #### KMS_EVENTS3
 
-Similarly, you'll need the ID of the metadata profile, which we'll retrieve using its name in the [metadataProfile.list](https://developer.kaltura.com/console/service/metadataProfile/action/list) API:
+Similarly, you'll need the ID of the metadata profile, which we'll retrieve using its name in the [metadataProfile.list](/console/service/metadataProfile/action/list) API:
 
 ```python
 filter = KalturaMetadataProfileFilter()
@@ -211,14 +211,14 @@ This XML contains event information, such as the start and end times (in unix ti
 </metadata>
 ```
 
-Like the first schema, the XML is populated with the relevant values and added to the liveStream entry with the [`metadata.add`](https://developer.kaltura.com/console/service/metadata/action/add) API as seen above. 
+Like the first schema, the XML is populated with the relevant values and added to the liveStream entry with the [`metadata.add`](/console/service/metadata/action/add) API as seen above. 
 
 
 ## The Webcasting Studio App 
 
 ### Creating Download Links 
 
-The admins, or person presenting, will need to download and use the Kaltura Webcasting Desktop Application. To add download links to your webpage for the Kaltura Webcasting Studio, we'll make a call to the [systemUIConf.listTemplates](https://developer.kaltura.com/console/service/uiConf/action/listTemplates) API to list instances of Webcasting UI Configs and grab the first one. 
+The admins, or person presenting, will need to download and use the Kaltura Webcasting Desktop Application. To add download links to your webpage for the Kaltura Webcasting Studio, we'll make a call to the [systemUIConf.listTemplates](/console/service/uiConf/action/listTemplates) API to list instances of Webcasting UI Configs and grab the first one. 
 Then we'll parse it to find the recommended versions for OSX and Windows. 
 
 ```python 
@@ -269,7 +269,7 @@ To launch the application, you'll need the attached [KAppLauncher script](https:
 
 #### Creating a Kaltura Session for a Studio Launch 
 
-You'll create a type USER session using the [`session.start`](https://developer.kaltura.com/console/service/session/action/start) API, with privileges to the given entry and role of WEBCAST_PRODUCER_DEVICE_ROLE. 
+You'll create a type USER session using the [`session.start`](/console/service/session/action/start) API, with privileges to the given entry and role of WEBCAST_PRODUCER_DEVICE_ROLE. 
 
 Partner ID and Admin Secret can be found in your KMC [Integration Settings](https://kmc.kaltura.com/index.php/kmcng/settings/integrationSettings). 
 
@@ -289,13 +289,13 @@ The above KS would give this user producer access to the entry within the Webcas
 
 #### Player UiConf 
 
-Most likely you were given the correct UiConf when Webcasting was enabled on your account, but if you're not sure which it is, you can use the [uiConf.list](https://developer.kaltura.com/console/service/uiConf/action/list) API to find it. 
+Most likely you were given the correct UiConf when Webcasting was enabled on your account, but if you're not sure which it is, you can use the [uiConf.list](/console/service/uiConf/action/list) API to find it. 
 Just filter on `filter.nameLike = "MediaSpace Webcast Player"` and grab that ID. 
 
 #### Presentation Conversion Profile ID
 
 This is needed in the case that a presenter chooses to upload a presentation. *It will not work if you don't have a conversion profile ID.* 
-You can find it with the [conversionProfile.list](https://developer.kaltura.com/console/service/conversionProfile/action/list) API, by grabbing the first item in the results. 
+You can find it with the [conversionProfile.list](/console/service/conversionProfile/action/list) API, by grabbing the first item in the results. 
 
 
 ```python
@@ -374,7 +374,7 @@ function launchKalturaWebcast() {
 
 When the broadcast is live, there's a delay of about thirty seconds before it is available to the viewer. During this time, if the liveStream's "explicitLive" value is set to true, the preview is available to a user with a Kaltura Session that contains `restrictexplicitliveview` in the privilege string (for moderators who are involved in testing)
 
-Do determine whether an entry is live, you can call the [isLive](https://developer.kaltura.com/console/service/liveStream/action/isLive) with the entry ID. 
+Do determine whether an entry is live, you can call the [isLive](/console/service/liveStream/action/isLive) with the entry ID. 
 The Kaltura Player does this automatically for live entries, but we'll want to determine whether to play the live entry, or whether to replace it with the recorded entry if the Live Event is already complete. 
 
 ```python
@@ -386,7 +386,7 @@ if (is_live == False):
         entry_id = livestream.recordedEntryId
 ```
 
-For the case of `PER_SESSION` recording, a new recording is created for every session, which means that the `recordedEntryId` field on the livestream Entry will be reset immediately to make room for a new recordedEntry. We find the entry by using [`baseEntry.list`](https://developer.kaltura.com/console/service/baseEntry/action/list) with the **rootEntryId** equal to our livestream entry:
+For the case of `PER_SESSION` recording, a new recording is created for every session, which means that the `recordedEntryId` field on the livestream Entry will be reset immediately to make room for a new recordedEntry. We find the entry by using [`baseEntry.list`](/console/service/baseEntry/action/list) with the **rootEntryId** equal to our livestream entry:
 
 ```python
     else:
@@ -407,13 +407,13 @@ The string looks something like this - using the format tool to concatenate valu
 privileges = "sview:{},enableentitlement,appid:{},appdomain:{},sessionkey:{}" \
   .format(entry_id, entry_id, config.app_id, config.app_domain, user_id)
 ```
-With that privilege string, we create a USER Kaltura Session using the [`session.start`](https://developer.kaltura.com/console/service/session/action/start) API as seen above.
+With that privilege string, we create a USER Kaltura Session using the [`session.start`](/console/service/session/action/start) API as seen above.
 
 > Now that we have a Kaltura Session, we can embed the player in an HTML page. We recommend using the v7 player, which is built for speed and performance. However, the functionality for powerpoint slides in the livestream is not yet supported in player v7, so if this is something that is required in your webcasting flow, see Player V2 embed below. 
 
 ### Player Embed V7 
 
-You can create a new player in the [Studio](https://kmc.kaltura.com/index.php/kmcng/studio/v3) and grab its ID, which is referred to as the UI Conf ID. You'll need to edit it using the [uiconf.update](https://developer.kaltura.com/console/service/uiConf/action/update) API by passing the ID of the player and the confvars below:
+You can create a new player in the [Studio](https://kmc.kaltura.com/index.php/kmcng/studio/v3) and grab its ID, which is referred to as the UI Conf ID. You'll need to edit it using the [uiconf.update](/console/service/uiConf/action/update) API by passing the ID of the player and the confvars below:
 
 ```python
 id = "UI CONF ID"
@@ -574,7 +574,7 @@ https://www.kaltura.com/apps/webcast/vlatest/index.html?MediaEntryId=1_1sd21wtr&
 
 ## Accessing Recordings 
 
-Assuming that recording is enabled (`recordStatus` in the livestream creation), your recordings can be found in the [KMC](https://kmc.kaltura.com/index.php/kmcng/content/entries/lis). You can also retrieve with the API by using the livestream Entry ID as the root entry, which will return all recordings that resulted from this entry. You'll use the [baseEntry.list](https://developer.kaltura.com/console/service/baseEntry/action/list) API, and note that it requires an ADMIN type Kaltura Session:
+Assuming that recording is enabled (`recordStatus` in the livestream creation), your recordings can be found in the [KMC](https://kmc.kaltura.com/index.php/kmcng/content/entries/lis). You can also retrieve with the API by using the livestream Entry ID as the root entry, which will return all recordings that resulted from this entry. You'll use the [baseEntry.list](/console/service/baseEntry/action/list) API, and note that it requires an ADMIN type Kaltura Session:
 
 ```python
 filter = KalturaBaseEntryFilter()

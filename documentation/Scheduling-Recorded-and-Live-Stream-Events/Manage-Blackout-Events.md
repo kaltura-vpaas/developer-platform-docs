@@ -8,13 +8,13 @@ A blackout event is a construct that informs the [Kaltura events scheduling API]
 
 ## Create Blackout Event
 
-At [scheduleEvent.add](https://developer.kaltura.com/console/service/scheduleEvent/action/add) one of the main scheduleEvent types is KalturaBlackoutScheduleEvent
+At [scheduleEvent.add](/console/service/scheduleEvent/action/add) one of the main scheduleEvent types is KalturaBlackoutScheduleEvent
 
 
 
 <img src="/assets/images/blackout.png" style="zoom:30%;" />
 
-Simply choose the time period of your blackout event and call [scheduleEvent.add](https://developer.kaltura.com/console/service/scheduleEvent/action/add) with necessary parameters.
+Simply choose the time period of your blackout event and call [scheduleEvent.add](/console/service/scheduleEvent/action/add) with necessary parameters.
 
 
 
@@ -44,6 +44,6 @@ Examine the line:
 $scheduleEventConflictType = KalturaScheduleEventConflictType::BOTH;
 ```
 
-Which relies on the result of [scheduleEvent.getConflicts](https://developer.kaltura.com/console/service/scheduleEvent/action/getConflicts)
+Which relies on the result of [scheduleEvent.getConflicts](/console/service/scheduleEvent/action/getConflicts)
 
 Where BOTH handles a RESOURCE_CONFLICT and a BLACKOUT_CONFLICT. Using an approach similar to this, you have the ability to distinguish BLACKOUT_CONFLICTS and could handle each CONFLICT type separately if needed.

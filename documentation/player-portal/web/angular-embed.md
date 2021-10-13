@@ -6,7 +6,7 @@ weight: 110
 
 If you've tried embedding the Kaltura Player in your Angular app, you may have come across [the issue](https://github.com/angular/angular/issues/4903) where Angular deletes javascript **script** tags. In the embed examples below, we add the player to the Typescript project dynamically, or by creating the embed script *after* the component has been created or initialize, as described in [this workaround](https://stackoverflow.com/questions/35570746/angular2-including-thirdparty-js-scripts-in-component0).
 
-If you are not looking for angular solutions, check out the Player embed-types [here](https://developer.kaltura.com/player/web/embed-types-web/). 
+If you are not looking for angular solutions, check out the Player embed-types [here](/player/web/embed-types-web/). 
 
 ## Dynamic Embed 
 
@@ -48,7 +48,7 @@ Notice that in this scenario, the static script that *loads* the player should b
 
 Be sure to fill in the missing information needed in the player script: 
 - **partner_id**:found in the [KMC Integration Settings](https://kmc.kaltura.com/index.php/kmcng/settings/integrationSettings)
-- **uiConf_id** or player ID, found in the [KMC studio](https://kmc.kaltura.com/index.php/kmcng/studio/v2) or, if you're using the API, by calling [uiConf.list](https://developer.kaltura.com/console/service/uiConf/action/list) to see a full list of existing players. 
+- **uiConf_id** or player ID, found in the [KMC studio](https://kmc.kaltura.com/index.php/kmcng/studio/v2) or, if you're using the API, by calling [uiConf.list](/console/service/uiConf/action/list) to see a full list of existing players. 
 - **player_placeholder** that corresponds to the div in the HTML code
 - **entry_id** of the video that you wish to show in the player. 
 

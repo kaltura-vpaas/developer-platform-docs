@@ -36,7 +36,7 @@ A UI event enum can be access in the following way:
 player.Event.UI.EVENT_NAME;
 ```
 
-The full UI events list can be found [here](https://developer.kaltura.com/player/web/ui/ui-events)
+The full UI events list can be found [here](/player/web/ui/ui-events)
 
 ## Registering to Player Events
 
