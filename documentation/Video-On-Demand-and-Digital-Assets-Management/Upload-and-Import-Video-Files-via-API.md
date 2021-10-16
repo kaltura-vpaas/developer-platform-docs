@@ -12,7 +12,7 @@ Find the suitable ingestion methodologies for your workflow below:
 * [File Upload and Import REST APIs](/workflows/Ingest_and_Upload_Media)
   * [Web Upload in JavaScript/jQuery (with chunked parallel pause-resume support)](https://github.com/kaltura/chunked-file-upload-jquery)
   * [Upload in Java](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java)
-* [Bulk Upload XML and CSV formats](/api-docs/Ingest_and_Upload_Media/Bulk-Content-Ingestion.html)
+* [Import via Bulk Upload](/Video-On-Demand-and-Digital-Assets-Management/Import-Video-Files-via-Bulk-Upload.html) 
 * [Live Streaming and Webcam Recording](/workflows/Live_Stream_and_Broadcast)
 * [Drop Folders and Aspera](https://knowledge.kaltura.com/node/737)
 
@@ -73,7 +73,7 @@ At this point, Kaltura will start analyzing the uploaded file, prepare for the t
 
 ## How to Ingest a Media File Bundled with Metadata (CSV, XML, API)
 
-To enable more advanced content ingestion options, the provided CSV/XML samples can be extended to include multiple/custom metadata items, account specific settings, update action and advanced content ingestion options (for example, ingestion of multiple transcoding flavors, multiple thumbnails etc.) Each item element within the XML, and each line in the CSV, represent a single entry created in the publisher account. Each entry will be populated with the metadata listed in its item element and the content referenced from it. When submitted, the bulk upload XML/CSV is validated on the Kaltura server. The validation includes an inspection of the XML structure, and verification of elements' structure and order compliance with Kaltura's bulk upload XSD (XML schema). For more information see <a href="http://knowledge.kaltura.com/faq/what-bulk-upload-and-ftp-content-ingestion" target="_blank" title="What is bulk and FTP upload">Bulk Upload and FTP Upload</a>.
+To enable more advanced content ingestion options, the provided CSV/XML samples can be extended to include multiple/custom metadata items, account specific settings, update action and advanced content ingestion options (for example, ingestion of multiple transcoding flavors, multiple thumbnails etc.) Each item element within the XML, and each line in the CSV, represent a single entry created in the publisher account. Each entry will be populated with the metadata listed in its item element and the content referenced from it. When submitted, the bulk upload XML/CSV is validated on the Kaltura server. The validation includes an inspection of the XML structure, and verification of elements' structure and order compliance with Kaltura's bulk upload XSD (XML schema). For more information see [Import via Bulk Upload](/Video-On-Demand-and-Digital-Assets-Management/Import-Video-Files-via-Bulk-Upload.html) 
 
 To ingest a media file bundled with Metadata:
 

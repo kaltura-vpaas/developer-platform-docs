@@ -13,7 +13,7 @@ In order to scale meetings even further, Kaltura offers the ability to stream a 
 
 ## Demo App
 
-https://github.com/kaltura-vpaas/webcasting-from-meeting
+[Kaltura Webcasting From Meeting Demo](https://github.com/kaltura-vpaas/webcasting-from-meeting)
 
 ## Overview
 

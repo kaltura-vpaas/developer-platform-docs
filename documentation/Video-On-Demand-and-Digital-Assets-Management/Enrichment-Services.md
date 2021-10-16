@@ -85,8 +85,9 @@ For a full list of API calls related to the creation/modification and user exper
 
 ## See Also:
 
-/console/service/entryVendorTask
+[entryVendorTask](/console/service/entryVendorTask)
 
-/api-docs/service/vendorCatalogItem
+[vendorCatalogItem](/api-docs/service/vendorCatalogItem)
 
-/api-docs/service/reachProfile
+[reachProfile](/api-docs/service/reachProfile)
+

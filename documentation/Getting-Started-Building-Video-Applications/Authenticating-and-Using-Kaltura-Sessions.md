@@ -26,7 +26,7 @@ There are three methods for generating a Kaltura Session:
 
 ## Important Notes When Generating Kaltura Sessions
 
-1.  Familiarize yourself with the concepts of user roles, privileges, access control and entitlements by reading the  [Kaltura API Authentication and Security Guide](Kaltura_API_Authentication_and_Security.html)  to ensure that your application is secured. 
+1.  Familiarize yourself with the concepts of user roles, privileges, access control and entitlements by reading [Deep-Dive-The-Kaltura-API-Authentication-and-Security](/Getting-Started-Building-Video-Applications/Deep-Dive-The-Kaltura-API-Authentication-and-Security.html) to ensure that your application is secured. 
 2.  Sharing the account API secret keys with 3rd party vendors should be avoided, as secret keys can not be regenerated or blocked for access. Kaltura API based application developers and 3rd party application vendors should build their application to leverage the appToken API to manage (create and revoke access) application tokens.
 3.  To ensure best security and analytics tracking during playback, always pass a Kaltura Session to the player embed.
 4.  To ensure tracking of end-user analytics, always pass a value to the userId field that is truly unique and represents a unique user in your system. 
@@ -42,7 +42,7 @@ For information on Kaltura session-based restrictions, refer to [Kaltura’s API
 
 ## Managing End-User Content Entitlements
 
-[Content Entitlements](/api-docs/Secure_Control_and_Govern/Content-Categories-Management.html#Managing End-User Content Entitlements) is a method to allow end users access to a group of content items (entries).
+[Categories-and-Entitlement-Rules](/Video-On-Demand-and-Digital-Assets-Management/Categories-and-Entitlement-Rules.html) is a method to allow end users access to a group of content items (entries).
 Entitlements are configured on the category level by setting a special unique key to identify the applicative context in which to allow or deny access to the category’s entries.
 
 Applications such as [Kaltura MediaSpace](http://corp.kaltura.com/Products/Video-Applications/Kaltura-Mediaspace-Video-Portal) implement entitlements to achieve the concept of “Authenticated Content Channels”.

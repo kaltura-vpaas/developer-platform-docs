@@ -54,15 +54,15 @@ Select EXTERNAL for `playlistType` and supply a URL to a [valid mrss file]( http
 
 ## Stitched Playlist Playback
 
-Refer to [Play-Manifests,-HLS-and-DASH-Streaming](../Streaming-and-Publishing/Play-Manifests,-HLS-and-DASH-Streaming.html) for stitched playback of playlists.
+Refer to [Play-Manifests,-HLS-and-DASH-Streaming](/Streaming-and-Publishing/Play-Manifests-HLS-and-DASH-Streaming.html) for stitched playback of playlists.
 
 
 
 ## Playlist Analytics
 
-A playlist is child of [BaseEntry](/api-docs/General_Objects/Objects/KalturaPlaylist) and its `entryId` can be used to retrieve analytics, see  [Intro-to-Kaltura-Video-Analytics-and-Best-Practices](../Analytics-and-Reporting /Intro-to-Kaltura-Video-Analytics-and-Best-Practices.html) 
+A playlist is child of [BaseEntry](/api-docs/General_Objects/Objects/KalturaPlaylist) and its `entryId` can be used to retrieve analytics, see  [Intro-to-Kaltura-Video-Analytics-and-Best-Practices](/Analytics-and-Reporting/Intro-to-Kaltura-Video-Analytics-and-Best-Practices.html) 
 
 You can also refer to this [guide](https://knowledge.kaltura.com/help/playlist-analytics) for accessing playlist analytics from the KMC.
 
-Finally, you can use a playlist's `entryId` to call [Embedded-Analytics-Reports](../Analytics-and-Reporting /Embedded-Analytics-Reports.md) to mimic the experience from the guide above.
+Finally, you can use a playlist's `entryId` to call [Embedded-Analytics-Reports](/Analytics-and-Reporting/Embedded-Analytics-Component.html) to mimic the experience from the guide above.
 
